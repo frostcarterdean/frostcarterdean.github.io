@@ -1,0 +1,357 @@
+<!doctype HTML>
+<html>
+<head>
+	<title>Carter Frost</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	
+	<script src="https://kit.fontawesome.com/28aba166c5.js" crossorigin="anonymous"></script>
+	
+	<link rel="shortcut icon" href="images/favicon.ico"/>
+	<style>
+		body {
+			background-color: #141415;
+			/* background-image: url('images/background_pattern.png'); */
+			overflow-x: hidden;
+		}
+		#carter-frost {
+			text-align: center;
+			height: 95.5vh;
+		}
+		#carter-frost-header {
+			font-family: 'Poppins', sans-serif;
+			font-weight: bold; 
+			font-style: italic;
+			font-size: 9em;
+			color: #2B6D3B;
+			margin-top: 10vh;
+		}
+		@media only screen and (max-width: 480px) {
+			#carter-frost-header {
+				font-size: 6.5em;
+				margin-top: 3vh;
+			}
+			#carter-frost {
+				height: 99.8vh;
+				border-bottom: .2em solid #2B6D3B;
+			}
+		}
+		@media only screen and (min-width: 768px) {
+			#carter-frost-header {
+				margin-top: 25vh;
+			}
+		}
+		#carter-frost-description {
+			margin-top: -4em;
+			font-family: 'Roboto', sans-serif;
+			font-style: italic;
+			font-size: 1.8em;
+			color: white;
+		}
+		#skills-header, #portfolio-header, #background-header {
+			font-size: 5em;
+			text-align: center;
+			font-family: 'Poppins', sans-serif;
+			font-weight: bold; 
+			font-style: italic;
+			color: #2B6D3B;
+		}
+		#arrow {
+			color: #2B6D3B; 
+			margin-top: 1em;
+		}
+		@media only screen and (max-width: 767px) {
+			#skills-header, #portfolio-header, #background-header {
+				font-size: 3.5em;
+			}
+			#arrow {
+				margin-top: -.2em;
+			}
+		}
+		#contact-header {
+			font-size: 3.5em;
+			text-align: center;
+			font-family: 'Poppins', sans-serif;
+			font-weight: bold; 
+			font-style: italic;
+			background-color: #2B6D3B;
+			color: white;
+			width: 75%;
+			margin: 1em auto 1em auto;
+			border: 1px solid #08150B;
+		}
+		#contact-header:hover {
+			opacity: .7;
+			cursor: pointer;
+		}
+		#skill-items {
+			
+		}
+		#skill-items div {
+			text-align: center;
+		}
+		#skill-items div h2 {
+			color: white;
+			font-family: 'Roboto', sans-serif;
+			font-size: 1.5em;
+		}
+		#skill-items img {
+			height: 7em;
+			width: 7em;
+		}
+		#portfolio-items {
+			
+		}
+		.in-production {
+			background-color: #08150B;
+			border: .2em solid #2B6D3B;
+			width: 75%; 
+			height: 15em; 
+			margin: auto;
+			color: white;
+		}
+		.in-production p {
+			font-size: 2.7em;
+			text-align: center;
+			font-family: 'Roboto', sans-serif;
+			margin-top: 1.8em;
+		}
+		#background-text {
+			font-family: 'Poppins', sans-serif;
+			line-height: 2.6em;
+			letter-spacing: .1em;
+			background-color: #08150B;
+			border: .2em solid #2B6D3B;
+			width: 75%;
+			margin: auto;
+			color: white;
+		}
+		a {
+			text-decoration: none;
+		}
+		.sticky {
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+		#navigation {
+			background-color: #2B6D3B;
+			color: white;
+			z-index: 1;
+			text-align: center;
+			font-family: 'Roboto', sans-serif;
+			font-style: italic;
+			font-size: 1.4em;
+		}
+		#navigation div {
+			padding: .1em;
+		}
+		#navigation div:hover {
+			background-color: #08150B;
+			cursor: pointer;
+		}
+		#footer {
+			padding: .5em;
+			background-color: #2B6D3B;
+		}
+		#portfolio-covid {
+			background-color: #08150B;
+			border: .2em solid #2B6D3B;
+			color: white;
+			font-family: 'Poppins', sans-serif;
+			line-height: 2.6em;
+			letter-spacing: .1em;
+			width: 75%;
+			margin: auto;
+		}
+		#portfolio-covid img {
+			
+		}
+		@media only screen and (max-width: 800px) {
+			#portfolio-covid, .in-production, #background-text, #contact-header {
+				width: 90%;
+			}
+		}
+		.info-button {
+			background-color: #2B6D3B;
+			color: white;
+			border: none;
+			margin-bottom: 1em;
+		}
+		.info-button:hover {
+			cursor: pointer;
+			opacity: .7;
+		}
+		.portfolio-buttons {
+			background-color: #2B6D3B;
+			border: none;
+			color: white;
+		}
+		.portfolio-buttons:hover {
+			cursor: pointer;
+			opacity: .7;
+		}
+		#carter-frost {
+			background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/bg.jpg");
+			
+			/* Set a specific height */
+
+			/* Position and center the image to scale nicely on all screens */
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: relative;
+			
+		}	
+	</style>
+</head>
+<body>
+	<div id="carter-frost" class="w3-container">
+		<p id="carter-frost-header" data-aos="fade-left" data-aos-duration="1900">Carter Frost</p>
+		<p id="carter-frost-description" data-aos="fade-right" data-aos-duration="1900">Digital media specialist from West Palm Beach, Florida. Let's work together to make something great.</p>
+		<!-- <hr style="width: 60%; margin: auto; border: 1px solid #2B6D3B;" class="w3-hide-small" data-aos="fade-up" data-aos-duration="1200"> -->
+		<!-- <span><i id="arrow" class="fas fa-arrow-down fa-3x w3-animate-fading"></i></span> -->
+	</div>
+	<div id="navigation" class="w3-row-padding w3-hide-small">
+		<a href="#skills"><div class="w3-col l2 m3">Skills</div></a>
+		<a href="#portfolio"><div class="w3-col l2 m3">Portfolio</div></a>
+		<a href="#background"><div class="w3-col l2 m3">Background</div></a>
+		<a href="#footer"><div class="w3-col l6 m3">Contact</div></a>
+	</div>
+	<div>
+		<div id="skills" class="w3-container">
+			<p id="skills-header" data-aos="fade-right" data-aos-duration="1100">Skills</p>
+		</div>
+		<div id="skill-items" class="w3-row-padding" data-aos="fade-up" data-aos-duration="1100">
+			<div class="w3-col l3 s6">
+				<img src="images/html.png">
+				<h2>HTML5</h2>
+			</div>
+			<div class="w3-col l3 s6">
+				<img src="images/css.png">
+				<h2>CSS3</h2>
+			</div>
+			<div class="w3-col l3 s6">
+				<img src="images/js.png">
+				<h2>JavaScript</h2>
+			</div>
+			<div class="w3-col l3 s6">
+				<img src="images/react.png">
+				<h2>React</h2>
+			</div>
+			<div class="w3-col l3 s6">
+				<img src="images/php.png">
+				<h2>PHP</h2>
+			</div>
+			<div class="w3-col l3 s6">
+				<img src="images/mysql.png">
+				<h2>MySQL</h2>
+			</div>
+			<div class="w3-col l3 s6">
+				<img src="images/photoshop.png">
+				<h2>Photoshop</h2>
+			</div>
+			<div class="w3-col l3 s6">
+				<img src="images/xd.png">
+				<h2>XD</h2>
+			</div>
+			<div class="w3-col l3 s6">
+				<img src="images/office.png">
+				<h2>Office</h2>
+			</div>
+		</div>
+	</div>
+	<div>
+		<div id="portfolio" class="w3-container">
+			<p id="portfolio-header" data-aos="fade-right" data-aos-duration="1100">Portfolio</p>
+		</div>
+		<div id="portfolio-items">
+			<div id="portfolio-covid" class="w3-card" data-aos="fade" data-aos-duration="1100">
+				<img src="images/covid-screenshot.png" style="width: 100%; border-bottom: .2em solid #2B6D3B;"></img>
+				<div class="w3-container">
+					<h2 style="text-align: center">COVID-19 Travel Guide</h2>
+					<div class="w3-row w3-center">
+						<a href="https://github.com/frostcarterdean/Workshop/tree/main"><button class="w3-container w3-center w3-margin portfolio-buttons" style="width: 30%">Code</button></a>
+						<a href="https://students.cah.ucf.edu/~ca631855/travel/"><button class="w3-container w3-center w3-margin portfolio-buttons" style="width: 30%">Live</button></a>
+					</div>
+					<p style="text-align: center">Website that links to breaking news articles about COVID-19, displays COVID-19 statistics for all states and counties in the United States, and shows statistics and information about COVID-19 worldwide. Made with vanilla HTML, CSS, JavaScript, PHP, and MySQL and uses data from four different APIs.</p>
+					<button onclick="myFunction2('Demo3')" class="w3-block info-button">More Information</button>
+					<div id="Demo3" class="w3-hide w3-container" style="margin-bottom: 1em">
+						<p>Home page uses PHP, mySQL, and manual user entry to alter what content is displayed; the site owner uses a form to change information outputted in one of the seven templates.</p>
+						<p>United States page pulls data from COVID Tracking Project Data API and Covid Act Now API for statewide and county information respectively. It contains an interactive map courtesy of Google GeoCharts; the user can hover over states to glance data and click on them to view county data.</p>
+						<p>The World page pulls data from Oxford COVID-19 Government Response Tracker API and Coronavirus COVID19 API. Data from the former is used to output a sortable and filterable table with data for various countries. The latter is used to display overall global statistics.</p>
+						<p>Group project made as part of studies. Home page, all of United States page except some map implementation, and all of World page are my personal work; logo and part of map implementation are courtesy of other students.</p>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="w3-container in-production" data-aos="fade" data-aos-duration="1100">
+				<p>In Production</p>
+			</div>
+			<br>
+			<div class="w3-container in-production" data-aos="fade" data-aos-duration="1100">
+				<p>In Production</p>
+			</div>
+		</div>
+	</div>
+	<div>
+		<div id="background" class="w3-container">
+			<p id="background-header" data-aos="fade-right" data-aos-duration="1100">Background</p>
+		</div>
+		<div id="background-text" class="w3-container" data-aos="fade-left" data-aos-duration="1100">
+			<p>My name is Carter Frost. I like to make websites. I'm proudly from West Palm Beach, Florida.</p>
+			<p>I'm currently studying for my B.A. in Digital Media at the University of Central Florida, specializing in web and social platforms. In the last year, I've studied front-end languages like HTML, CSS, and JavaScript, frameworks such as React, and modern environment tools. I've as well made projects using PHP and MySQL. My studies have also included graphic and user interface design, video editing, accessibility theory, the impact of social platforms, and working within diverse teams. I can speak a little Japanese too. I'm graduating next spring with currently a 3.6 GPA.</p>
+			<p>I lean towards front-end development, currently building projects to include in this very portfolio. I love to learn new things, open myself up to opportunities where I can learn new things, and show that I've learned new things. I welcome all opportunities digital media or otherwise. My passion for learning new skills and producing quality work can be your asset.</p>
+			<p>Besides studying and coding, I also love to work with special needs children. I've been part of <a href="https://www.sabrsoccer.net/top-soccer/about/">SABR TOPSoccer</a> for the last six years, a program for teaching disabled children and adults the sport of soccer. I deeply value inclusivity and fostering equitable experiences. In my spare time, I also like to study Japanese, lift weights, and read.</p>
+			<p>Below, you'll find my contact information. I can be your next developer, designer, digital media savant, anything really. Let's work together to build something great.</p>
+		</div>
+	</div>
+	<div class="w3-container">
+		<a href="mailto:carterfrostdean@gmail.com"><p id="contact-header">Contact Me</p></a>
+	</div>
+	<div id="footer" class="w3-row">
+		<div class="w3-col l2 m3 s3">
+			<a href="https://www.linkedin.com/in/carter-frost-5012211a7/"><span style="color: white;"><i class="fab fa-linkedin fa-2x"></i><span class="w3-hide-small">&nbsp;&nbsp;LinkedIn</span></span></a>
+		</div>
+		<div class="w3-col l2 m3 s3">
+			<a href="https://github.com/frostcarterdean"><span style="color: white;"><i class="fab fa-github fa-2x"></i><span class="w3-hide-small">&nbsp;&nbsp;GitHub</span></span></a>
+		</div>
+		<div class="w3-col l4 m6 s3">
+			<a href="mailto:carterfrostdean@gmail.com"><span style="color: white;"><i class="fas fa-envelope fa-2x"></i><span class="w3-hide-small">&nbsp;&nbsp;carterfrostdean@gmail.com</span></span></a>
+		</div>
+	</div>
+	<script>
+	AOS.init();
+	window.onscroll = function() {myFunction()};
+
+	var navbar = document.getElementById("navigation");
+	var sticky = navbar.offsetTop;
+
+	function myFunction() {
+		if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		} else {
+			navbar.classList.remove("sticky");
+		}
+	}
+	
+	function myFunction2(id) {
+		var x = document.getElementById(id);
+		if (x.className.indexOf("w3-show") == -1) {
+		x.className += " w3-show";
+		} else { 
+			x.className = x.className.replace(" w3-show", "");
+		}
+	}
+	
+	</script>
+</body>
+</html>
