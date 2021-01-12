@@ -162,7 +162,7 @@
 			padding: .5em;
 			background-color: #2B6D3B;
 		}
-		#portfolio-covid {
+		.portfolio-item {
 			background-color: #08150B;
 			border: .2em solid #2B6D3B;
 			color: white;
@@ -176,7 +176,7 @@
 			
 		}
 		@media only screen and (max-width: 800px) {
-			#portfolio-covid, .in-production, #background-text, #contact-header {
+			.portfolio-item, .in-production, #background-text, #contact-header {
 				width: 90%;
 			}
 		}
@@ -274,7 +274,7 @@
 			<p id="portfolio-header" data-aos="fade-right" data-aos-duration="1100">Portfolio</p>
 		</div>
 		<div id="portfolio-items">
-			<div id="portfolio-covid" class="w3-card" data-aos="fade" data-aos-duration="1100">
+			<div class="portfolio-item w3-card" data-aos="fade" data-aos-duration="1100">
 				<img src="images/covid-screenshot.png" style="width: 100%; border-bottom: .2em solid #2B6D3B;"></img>
 				<div class="w3-container">
 					<h2 style="text-align: center">COVID-19 Travel Guide</h2>
@@ -293,8 +293,16 @@
 				</div>
 			</div>
 			<br>
-			<div class="w3-container in-production" data-aos="fade" data-aos-duration="1100">
-				<p>In Production</p>
+			<div class="portfolio-item w3-card" data-aos="fade" data-aos-duration="1100">
+				<img src="images/booklet-screenshot.png" style="width: 100%; border-bottom: .2em solid #2B6D3B;"></img>
+				<div class="w3-container">
+					<h2 style="text-align: center">SABR TOPSoccer 2020 Promotional Booklet</h2>
+					<div class="w3-row w3-center">
+						<a href="https://drive.google.com/file/d/1SV8yHnMQq9a0J4mtWMiGDgwNIEWLy5hT/view?usp=sharing"><button class="w3-container w3-center w3-margin portfolio-buttons" style="width: 30%">Cover</button></a>
+						<a href="https://drive.google.com/file/d/1y40Ye_Hu2VUBl0fWrtP22xXuhWNAE7ld/view?usp=sharing"><button class="w3-container w3-center w3-margin portfolio-buttons" style="width: 30%">Booklet</button></a>
+					</div>
+					<p style="text-align: center">Promotional booklet created to celebrate SABR TOPSoccer's 20th season. Based in Boca Raton, SABR TOPSoccer is a volunteer-based program that provides special needs athletes the opportunity of recreational soccer (free of charge). Made with Microsoft Word and some Adobe Photoshop use.</p>
+				</div>
 			</div>
 			<br>
 			<div class="w3-container in-production" data-aos="fade" data-aos-duration="1100">
