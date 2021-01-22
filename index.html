@@ -14,352 +14,365 @@
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	
 	<script src="https://kit.fontawesome.com/28aba166c5.js" crossorigin="anonymous"></script>
-	
-	<link rel="shortcut icon" href="images/favicon.ico"/>
 	<style>
+		/* small: less 601 */
+		/* large: greater 992 */
+	
 		body {
-			background-color: #141415;
-			/* background-image: url('images/background_pattern.png'); */
-			overflow-x: hidden;
+			background-color: #0160a0;
+		}
+		#splash {
+			height: 100vh;
+			/* background-image: url('images/background_reduced.png'); */
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: relative;
 		}
 		#carter-frost {
-			text-align: center;
-			height: 95.5vh;
-		}
-		#carter-frost-header {
-			font-family: 'Poppins', sans-serif;
-			font-weight: bold; 
+			font-family: Poppins, sans-serif;
+			font-weight: bold;
 			font-style: italic;
+			margin-top: 30vh;
+			margin-left: 5vh;
+			color: #00C2FF;
 			font-size: 9em;
-			color: #2B6D3B;
-			margin-top: 10vh;
-		}
-		@media only screen and (max-width: 480px) {
-			#carter-frost-header {
-				font-size: 6.5em;
-				margin-top: 3vh;
-			}
-			#carter-frost {
-				height: 99.8vh;
-				border-bottom: .2em solid #2B6D3B;
-			}
-		}
-		@media only screen and (min-width: 768px) {
-			#carter-frost-header {
-				margin-top: 25vh;
-			}
+			text-shadow: 3px 3px 4px #003356;
+			word-spacing: .1em;
+			
+			/*
+			
+			background-color: rgb(63,94,251);
+			background-image: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+			background-size: 100%;
+			-webkit-background-clip: text;
+			-moz-background-clip: text;
+			-webkit-text-fill-color: transparent; 
+			-moz-text-fill-color: transparent;
+			
+			*/
 		}
 		#carter-frost-description {
-			margin-top: -4em;
-			font-family: 'Roboto', sans-serif;
+			font-family: Poppins, sans-serif;
+			font-weight: bold;
 			font-style: italic;
-			font-size: 1.8em;
 			color: white;
+			font-size: 2em;
+			margin-left: 6vh;
+			margin-top: -1.5em;
+			word-spacing: .1em;
 		}
-		#skills-header, #portfolio-header, #background-header {
-			font-size: 5em;
-			text-align: center;
-			font-family: 'Poppins', sans-serif;
-			font-weight: bold; 
-			font-style: italic;
-			color: #2B6D3B;
+		#navigation-buttons-row {
+			margin-left: 6vh;
 		}
-		#arrow {
-			color: #2B6D3B; 
-			margin-top: 1em;
-		}
-		@media only screen and (max-width: 767px) {
-			#skills-header, #portfolio-header, #background-header {
-				font-size: 3.5em;
-			}
-			#arrow {
-				margin-top: -.2em;
-			}
-		}
-		#contact-header {
-			font-size: 3.5em;
-			text-align: center;
-			font-family: 'Poppins', sans-serif;
-			font-weight: bold; 
-			font-style: italic;
-			background-color: #2B6D3B;
+		.navigation-buttons {
+			background-color: #00426E;
+			background-image: url('images/tile2.png');
+			margin-right: 1em;
 			color: white;
-			width: 75%;
-			margin: 1em auto 1em auto;
-			border: 1px solid #08150B;
+			font-family: Poppins, sans-serif;
+			font-weight: bold;
+			font-style: italic;
+			font-size: 1.3em;
+			text-align: center;
+			border: .1em solid #00C2FF;
+			padding: .1em;
 		}
-		#contact-header:hover {
-			opacity: .7;
+		.navigation-buttons:hover {
 			cursor: pointer;
 		}
-		#skill-items {
-			
-		}
-		#skill-items div {
-			text-align: center;
-		}
-		#skill-items div h2 {
+		.header {
+			background-color: #00C2FF;
+			background-image: url('images/tile.png');
 			color: white;
-			font-family: 'Roboto', sans-serif;
-			font-size: 1.5em;
+			margin-left: 5vh;
+			font-size: 2.5em;
+			font-family: Poppins, sans-serif;
+			font-weight: bold;
+			font-style: italic;
+			text-align: center;
+			border: .1em solid #00C2FF;
+			box-shadow: 3px 3px 4px #003356;
 		}
-		#skill-items img {
-			height: 7em;
-			width: 7em;
+		.skill-image {
+			height: 10vh;
+			margin-top: 1em;
 		}
-		#portfolio-items {
-			
+		.skill-container {
+			background-color: #00426E; background-image: url('images/tile2.png'); border: .2em solid #00C2FF; width: 60%; margin: auto; text-align: center; margin-top: 3em;
 		}
-		.in-production {
-			background-color: #08150B;
-			border: .2em solid #2B6D3B;
-			width: 75%; 
-			height: 15em; 
+		.skill-container {
+			font-family: Poppins, sans-serif;
+			color: white;
+			font-weight: bold;
+			font-style: italic;
+		}
+		@media only screen and (min-width: 993px) {
+			.skill-container {
+				width: 10em;
+			}
+		}
+		@media only screen and (max-width: 992px) {
+			.skill-container {
+				width: 10em;
+			}
+		}
+		.portfolio-container {
+			margin-top: 1em;
+		}
+		
+		.about-text {
+			width: 90%;
 			margin: auto;
 			color: white;
+			font-family: Roboto, sans-serif;
+			word-spacing: .1em;
+			font-size: 1.1em;
+			line-height: 2em;
 		}
-		.in-production p {
-			font-size: 2.7em;
+		
+		.contact-button {
+			background-color: white;
+			/* background-image: url('images/tile.png'); */
+			color: #00C2FF;
+			font-size: 3em;
+			font-family: Poppins, sans-serif;
+			font-weight: bold;
+			font-style: italic;
 			text-align: center;
-			font-family: 'Roboto', sans-serif;
-			margin-top: 1.8em;
-		}
-		#background-text {
-			font-family: 'Poppins', sans-serif;
-			line-height: 2.6em;
-			letter-spacing: .1em;
-			background-color: #08150B;
-			border: .2em solid #2B6D3B;
-			width: 75%;
+			border: .1em solid #00C2FF;
+			width: 50%;
 			margin: auto;
+			margin-top: 1.5em;
+			margin-bottom: 1.5em;
+		}
+		.contact-button:hover {
+			cursor: pointer;
+		}
+		#footer {
+			background-color: #00C2FF;
+			background-image: url('images/tile.png');
+			padding: .5em;
 			color: white;
 		}
 		a {
 			text-decoration: none;
 		}
-		.sticky {
-			position: fixed;
-			top: 0;
-			width: 100%;
-		}
-		#navigation {
-			background-color: #2B6D3B;
-			color: white;
-			z-index: 1;
-			text-align: center;
-			font-family: 'Roboto', sans-serif;
-			font-style: italic;
-			font-size: 1.4em;
-		}
-		#navigation div {
-			padding: .1em;
-		}
-		#navigation div:hover {
-			background-color: #08150B;
-			cursor: pointer;
-		}
-		#footer {
-			padding: .5em;
-			background-color: #2B6D3B;
-		}
-		.portfolio-item {
-			background-color: #08150B;
-			border: .2em solid #2B6D3B;
-			color: white;
-			font-family: 'Poppins', sans-serif;
-			line-height: 2.6em;
-			letter-spacing: .1em;
-			width: 75%;
-			margin: auto;
-		}
-		#portfolio-covid img {
-			
-		}
-		@media only screen and (max-width: 800px) {
-			.portfolio-item, .in-production, #background-text, #contact-header {
+		
+		/* ------------------------------------ */
+		
+		@media only screen and (max-width: 600px) {
+			#carter-frost {
+				font-size: 6.5em;
+				margin-left: 0;
+				margin-top: 5vh;
+				text-align: center;
+			}
+			#carter-frost-description {
+				width: 90%;
+				margin: auto;
+				text-align: center;
+				font-size: 2em;
+			}
+			#navigation-buttons-row {
+				display: none;
+			}
+			.header {
+				margin-left: 0;
+			}
+			.contact-button {
 				width: 90%;
 			}
 		}
-		.info-button {
-			background-color: #2B6D3B;
-			color: white;
-			border: none;
-			margin-bottom: 1em;
-		}
-		.info-button:hover {
-			cursor: pointer;
-			opacity: .7;
-		}
-		.portfolio-buttons {
-			background-color: #2B6D3B;
-			border: none;
-			color: white;
-		}
-		.portfolio-buttons:hover {
-			cursor: pointer;
-			opacity: .7;
-		}
-		#carter-frost {
-			background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/bg.jpg");
-			
-			/* Set a specific height */
-
-			/* Position and center the image to scale nicely on all screens */
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-			position: relative;
-			
-		}	
 	</style>
 </head>
 <body>
-	<div id="carter-frost" class="w3-container">
-		<p id="carter-frost-header" data-aos="fade-left" data-aos-duration="1900">Carter Frost</p>
-		<p id="carter-frost-description" data-aos="fade-right" data-aos-duration="1900">Digital media specialist from West Palm Beach, Florida. Let's work together to make something great.</p>
-		<!-- <hr style="width: 60%; margin: auto; border: 1px solid #2B6D3B;" class="w3-hide-small" data-aos="fade-up" data-aos-duration="1200"> -->
-		<!-- <span><i id="arrow" class="fas fa-arrow-down fa-3x w3-animate-fading"></i></span> -->
-	</div>
-	<div id="navigation" class="w3-row-padding w3-hide-small">
-		<a href="#skills"><div class="w3-col l2 m3">Skills</div></a>
-		<a href="#portfolio"><div class="w3-col l2 m3">Portfolio</div></a>
-		<a href="#background"><div class="w3-col l2 m3">Background</div></a>
-		<a href="#footer"><div class="w3-col l6 m3">Contact</div></a>
-	</div>
-	<div>
-		<div id="skills" class="w3-container">
-			<p id="skills-header" data-aos="fade-right" data-aos-duration="1100">Skills</p>
-		</div>
-		<div id="skill-items" class="w3-row-padding" data-aos="fade-up" data-aos-duration="1100">
-			<div class="w3-col l3 s6">
-				<img src="images/html.png">
-				<h2>HTML5</h2>
-			</div>
-			<div class="w3-col l3 s6">
-				<img src="images/css.png">
-				<h2>CSS3</h2>
-			</div>
-			<div class="w3-col l3 s6">
-				<img src="images/js.png">
-				<h2>JavaScript</h2>
-			</div>
-			<div class="w3-col l3 s6">
-				<img src="images/react.png">
-				<h2>React</h2>
-			</div>
-			<div class="w3-col l3 s6">
-				<img src="images/php.png">
-				<h2>PHP</h2>
-			</div>
-			<div class="w3-col l3 s6">
-				<img src="images/mysql.png">
-				<h2>MySQL</h2>
-			</div>
-			<div class="w3-col l3 s6">
-				<img src="images/photoshop.png">
-				<h2>Photoshop</h2>
-			</div>
-			<div class="w3-col l3 s6">
-				<img src="images/xd.png">
-				<h2>XD</h2>
-			</div>
-			<div class="w3-col l3 s6">
-				<img src="images/office.png">
-				<h2>Office</h2>
+	<div id="splash">
+		<div class="w3-row">
+			<div class="w3-col">
+				<h1 id="carter-frost" data-aos="fade" data-aos-duration="2900">Carter Frost</h1>
+				<p id="carter-frost-description" data-aos="fade" data-aos-duration="2900">Creative digital media specialist ready to work for you.</p>
 			</div>
 		</div>
-	</div>
-	<div>
-		<div id="portfolio" class="w3-container">
-			<p id="portfolio-header" data-aos="fade-right" data-aos-duration="1100">Portfolio</p>
+		<div id="navigation-buttons-row" class="w3-row">
+			<a href="#skills"><div class="navigation-buttons w3-col l2 m2 w3-hide-small w3-hover-shadow" data-aos="fade-up" data-aos-duration="1000">Skills</div></a>
+			<a href="#portfolio"><div class="navigation-buttons w3-col l2 m2 w3-hide-small w3-hover-shadow" data-aos="fade-up" data-aos-duration="1500">Portfolio</div></a>
+			<a href="#about"><div class="navigation-buttons w3-col l2 m2 w3-hide-small w3-hover-shadow" data-aos="fade-up" data-aos-duration="2000">About</div></a>
+			<a href="mailto:carterfrostdean@gmail.com"><div class="navigation-buttons w3-col l2 m4 w3-hide-small w3-hover-shadow" data-aos="fade-up" data-aos-duration="2500">Contact</div></a>
 		</div>
-		<div id="portfolio-items">
-			<div class="portfolio-item w3-card" data-aos="fade" data-aos-duration="1100">
-				<img src="images/covid-screenshot.png" style="width: 100%; border-bottom: .2em solid #2B6D3B;"></img>
-				<div class="w3-container">
-					<h2 style="text-align: center">COVID-19 Travel Guide</h2>
-					<div class="w3-row w3-center">
-						<a href="https://github.com/frostcarterdean/Workshop/tree/main"><button class="w3-container w3-center w3-margin portfolio-buttons" style="width: 30%">Code</button></a>
-						<a href="https://students.cah.ucf.edu/~ca631855/travel/"><button class="w3-container w3-center w3-margin portfolio-buttons" style="width: 30%">Live</button></a>
+	</div>
+	<div id="gradient" style="background: rgb(0,36,78); background: linear-gradient(0deg, rgba(0,36,78,1) 0%, rgba(1,96,160,1) 100%); ">
+	<div id="skills">
+		<div id="skills-header" class="w3-row">
+			<div class="header w3-col l3 m5 s12"><i class="fas fa-tools"></i>&nbsp;Skills</div>
+		</div>
+		<div class="w3-row" style="width: 95%; margin: auto">
+			<div class="w3-col l2 m4 s6">
+				<div class="skill-container" data-aos="fade-up" data-aos-duration="1000">
+					<img class="skill-image" src="images/html.png"></img>
+					<p>HTML5</p>
+				</div>
+			</div>
+			<div class="w3-col l2 m4 s6">
+				<div class="skill-container" data-aos="fade-up" data-aos-duration="1200">
+					<img class="skill-image" src="images/css.png"></img>
+					<p>CSS3</p>
+				</div>
+			</div>
+			<div class="w3-col l2 m4 s6">
+				<div class="skill-container" data-aos="fade-up" data-aos-duration="1400">
+					<img class="skill-image" src="images/js.png"></img>
+					<p>JavaScript</p>
+				</div>
+			</div>
+			<div class="w3-col l2 m4 s6">
+				<div class="skill-container" data-aos="fade-up" data-aos-duration="1600">
+					<img class="skill-image" src="images/react.png"></img>
+					<p>React</p>
+				</div>
+			</div>
+			<div class="w3-col l2 m4 s6">
+				<div class="skill-container" data-aos="fade-up" data-aos-duration="1800">
+					<img class="skill-image" src="images/php.png"></img>
+					<p>PHP</p>
+				</div>
+			</div>
+			<div class="w3-col l2 m4 s6">
+				<div class="skill-container" data-aos="fade-up" data-aos-duration="2000">
+					<img class="skill-image" src="images/mysql.png"></img>
+					<p>MySQL</p>
+				</div>
+			</div>
+			<div class="w3-col l2 m4 s6">
+				<div class="skill-container" data-aos="fade-up" data-aos-duration="2200">
+					<img class="skill-image" src="images/photoshop.png"></img>
+					<p>Photoshop</p>
+				</div>
+			</div>
+			<div class="w3-col l2 m4 s6">
+				<div class="skill-container" data-aos="fade-up" data-aos-duration="2400">
+					<img class="skill-image" src="images/xd.png"></img>
+					<p>XD</p>
+				</div>
+			</div>
+			<div class="w3-col l2 m4 s6">
+				<div class="skill-container" data-aos="fade-up" data-aos-duration="2600">
+					<img class="skill-image" src="images/office.png"></img>
+					<p>Office</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	
+	<div id="portfolio">
+	
+		<div id="portfolio-header" class="w3-row">
+			<div class="header w3-col l3 m5 s12" style="margin-top: 5em"><i class="fas fa-folder"></i>&nbsp;Portfolio</div>
+		</div>
+		<div class="w3-row" style="width: 95%; margin: auto; margin-top: 3em;">
+		
+			<div class="portfolio-container w3-col l6 m6 s12" data-aos="fade-up" data-aos-duration="1500">
+				<div style="background-color: #00426E; background-image: url('images/tile2.png'); border: .2em solid #00C2FF; width: 90%; margin: auto;">
+					<div style="background-color: blue; height: 21em; background-image: url('images/covid.png'); background-position: center; background-repeat: no-repeat; background-size: cover; border-bottom: .2em solid #00C2FF">
 					</div>
-					<p style="text-align: center">Website that links to breaking news articles about COVID-19, displays COVID-19 statistics for all states and counties in the United States, and shows statistics and information about COVID-19 worldwide. Made with vanilla HTML, CSS, JavaScript, PHP, and MySQL and uses data from four different APIs.</p>
-					<button onclick="myFunction2('Demo3')" class="w3-block info-button">More Information</button>
-					<div id="Demo3" class="w3-hide w3-container" style="margin-bottom: 1em">
-						<p>Home page uses PHP, mySQL, and manual user entry to alter what content is displayed; the site owner uses a form to change information outputted in one of the seven templates.</p>
-						<p>United States page pulls data from COVID Tracking Project Data API and Covid Act Now API for statewide and county information respectively. It contains an interactive map courtesy of Google GeoCharts; the user can hover over states to glance data and click on them to view county data.</p>
-						<p>The World page pulls data from Oxford COVID-19 Government Response Tracker API and Coronavirus COVID19 API. Data from the former is used to output a sortable and filterable table with data for various countries. The latter is used to display overall global statistics.</p>
-						<p>Group project made as part of studies. Home page, all of United States page except some map implementation, and all of World page are my personal work; logo and part of map implementation are courtesy of other students.</p>
+					<div>
+						<h2 style="text-align: center; color: white; font-family: Poppins, sans-serif; font-weight: bold; font-style: italic; width: 90%; margin: auto; margin-top: .5em; margin-bottom: .5em; font-size: 1.7em;">COVID-19 Travel Guide</h2>
+						<div class="w3-row" style="margin-top: -.5em;">
+							<div class="w3-col w3-col l6 m6 s6">
+								<div class="portfolio-button" style="width: 80%; margin: auto; background-color: #00C2FF; text-align: center; font-family: Poppins, sans-serif; color: white; font-weight: bold; font-style: italic;">
+									<a href="https://github.com/frostcarterdean/Workshop/tree/main"><p style="padding: .5em;"><i class="fab fa-github"></i>&nbsp;Code</p></a>
+								</div>
+							</div>
+							<div class="w3-col w3-col l6 m6 s6">
+								<div class="portfolio-button" style="width: 80%; margin: auto; background-color: #00C2FF; text-align: center; font-family: Poppins, sans-serif; color: white; font-weight: bold; font-style: italic;">
+									<a href="https://students.cah.ucf.edu/~ca631855/travel/"><p style="padding: .5em;"><i class="fas fa-external-link-alt"></i>&nbsp;Live</p></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<p style="text-align: center; width: 90%; margin: auto; margin-top: -.1em; margin-bottom: 1em; color: white; font-family: Roboto, sans-serif; font-size: 1.1em; line-height: 2em; word-spacing: .1em">Website that links to breaking news articles about COVID-19, displays COVID-19 statistics for all states and counties in the United States, and shows statistics and information about COVID-19 worldwide. Made with vanilla HTML, CSS, JavaScript, PHP, and MySQL and uses data from four different APIs.</p>
+				</div>
+			</div>
+			
+			<div class="portfolio-container w3-col l6 m6 s12" data-aos="fade-up" data-aos-duration="2000">
+				<div style="background-color: #00426E; background-image: url('images/tile2.png'); border: .2em solid #00C2FF; width: 90%; height: 200%; margin: auto">
+					<div style="background-color: blue; height: 21em; background-image: url('https://i.imgur.com/I8oUmb8.png'); background-position: center; background-repeat: no-repeat; background-size: cover; border-bottom: .2em solid #00C2FF">
+					</div>
+					<div>
+						<h2 style="text-align: center; color: white; font-family: Poppins, sans-serif; font-weight: bold; font-style: italic; width: 90%; margin: auto; margin-top: .5em; margin-bottom: .5em; font-size: 1.7em;">TOPSoccer 2020 Booklet</h2>
+						<div class="w3-row" style="margin-top: -.5em;">
+							<div class="w3-col w3-col l6 m6 s6">
+								<div class="portfolio-button" style="width: 80%; margin: auto; background-color: #00C2FF; text-align: center; font-family: Poppins, sans-serif; color: white; font-weight: bold; font-style: italic;">
+									<a href="https://drive.google.com/file/d/1SV8yHnMQq9a0J4mtWMiGDgwNIEWLy5hT/view?usp=sharing"><p style="padding: .5em;"><i class="fas fa-book"></i>&nbsp;Cover</p></a>
+								</div>
+							</div>
+							<div class="w3-col w3-col l6 m6 s6">
+								<div class="portfolio-button" style="width: 80%; margin: auto; background-color: #00C2FF; text-align: center; font-family: Poppins, sans-serif; color: white; font-weight: bold; font-style: italic;">
+									<a href="https://drive.google.com/file/d/1y40Ye_Hu2VUBl0fWrtP22xXuhWNAE7ld/view?usp=sharing"><p style="padding: .5em;"><i class="fas fa-book-open"></i>&nbsp;Booklet</p></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<p style="text-align: center; width: 90%; margin: auto; margin-top: -.1em; margin-bottom: 1em; color: white; font-family: Roboto, sans-serif; font-size: 1.1em; line-height: 2em; word-spacing: .1em">Promotional booklet created to celebrate SABR TOPSoccer's 20th season. Based in Boca Raton, SABR TOPSoccer is a volunteer-based program that provides special needs athletes the opportunity of recreational soccer (free of charge). Made with Microsoft Word and some Adobe Photoshop use.</p>
+				</div>
+			</div>
+			
+			<div class="portfolio-container w3-col l4 m6 s12 w3-hide-small w3-hide-medium" style="display: none;">
+				<div style="background-color: #00426E; background-image: url('images/tile2.png'); border: .2em solid #00C2FF; width: 90%; margin: auto;">
+					<div style="background-color: blue; height: 21em; background-image: url('images/covid.png'); background-position: center; background-repeat: no-repeat; background-size: cover; border-bottom: .2em solid #00C2FF">
+					</div>
+					<div>
+						<h2 style="text-align: center; color: white; font-family: Poppins, sans-serif; font-weight: bold; font-style: italic; width: 90%; margin: auto; margin-top: .5em; margin-bottom: .5em">COVID-19 Travel Guide</h2>
+						<div class="w3-row" style="margin-top: -.5em;">
+							<div class="w3-col w3-col l6 m6 s6">
+								<div class="portfolio-button" style="width: 80%; margin: auto; background-color: #00C2FF; text-align: center; font-family: Poppins, sans-serif; color: white; font-weight: bold; font-style: italic;">
+									<p style="padding: .5em;"><i class="fab fa-github"></i>&nbsp;Code</p>
+								</div>
+							</div>
+							<div class="w3-col w3-col l6 m6 s6">
+								<div class="portfolio-button" style="width: 80%; margin: auto; background-color: #00C2FF; text-align: center; font-family: Poppins, sans-serif; color: white; font-weight: bold; font-style: italic;">
+									<p style="padding: .5em;"><i class="fas fa-external-link-alt"></i>&nbsp;Live</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<p style="text-align: center; width: 90%; margin: auto; margin-top: -.1em; margin-bottom: 1em; color: white; font-family: Roboto, sans-serif; font-size: 1.1em; line-height: 2em; word-spacing: .1em">Website that links to breaking news articles about COVID-19, displays COVID-19 statistics for all states and counties in the United States, and shows statistics and information about COVID-19 worldwide. Made with vanilla HTML, CSS, JavaScript, PHP, and MySQL and uses data from four different APIs.</p>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+		
+		<div id="about">
+			<div id="about-header" class="w3-row">
+			<div class="header w3-col l3 m5 s12" style="margin-top: 5em"><i class="fas fa-user"></i>&nbsp;About</div>
+			
+			<div class="w3-row" data-aos="fade-up" data-aos-duration="1900">
+				<div class="w3-col l12 m12 s12">
+					<div style="width: 90%; margin: auto; margin-top: 3em; background-color: #00426E; background-image: url('images/tile2.png'); border: .2em solid #00C2FF; padding-top: 2em; padding-bottom: 2em">
+						<p class="about-text">My name is Carter Frost. I like to make websites and more. I'm proudly from Lake Worth, Florida.</p>
+						<hr style="width: 90%; margin: auto; margin-top: 1em; margin-bottom: 1em; border: .1em solid #00C2FF">
+						<p class="about-text">I'm studying for my B.A. in Digital Media at the University of Central Florida, graduating this year with currently a 3.6 GPA. My studies have included graphic design, video editing, front-end and back-end website development, user interface and experience design, user accessibility theory, and some Japanese. I can do a little bit of everything.</p>
+						<hr style="width: 90%; margin: auto; margin-top: 1em; margin-bottom: 1em; border: .1em solid #00C2FF">
+						<p class="about-text">I'm also part of SABR TOPSoccer, a program based in Boca Raton dedicated to providing free recreational soccer to special needs athletes. I deeply value inclusivity and hopefully, you'll find that in my work.</p>
+						<hr style="width: 90%; margin: auto; margin-top: 1em; margin-bottom: 1em; border: .1em solid #00C2FF">
+						<p class="about-text">As I'm graduating soon, I'm eager to enter the professional workforce. I'd love to be your next designer, developer, or digital media savant. I'm open to every and all opportunities. Let my passions for learning, quality, and all things digital media be your next asset.</p>
+						<hr style="width: 90%; margin: auto; margin-top: 1em; margin-bottom: 1em; border: .1em solid #00C2FF">
+						<p class="about-text">My email address is carterfrostdean@gmail.com. Let's work together and build something great.</p>
 					</div>
 				</div>
 			</div>
-			<br>
-			<div class="portfolio-item w3-card" data-aos="fade" data-aos-duration="1100">
-				<img src="https://i.imgur.com/I8oUmb8.png" style="width: 100%; border-bottom: .2em solid #2B6D3B;"></img>
-				<div class="w3-container">
-					<h2 style="text-align: center">SABR TOPSoccer 2020 Promotional Booklet</h2>
-					<div class="w3-row w3-center">
-						<a href="https://drive.google.com/file/d/1SV8yHnMQq9a0J4mtWMiGDgwNIEWLy5hT/view?usp=sharing"><button class="w3-container w3-center w3-margin portfolio-buttons" style="width: 30%">Cover</button></a>
-						<a href="https://drive.google.com/file/d/1y40Ye_Hu2VUBl0fWrtP22xXuhWNAE7ld/view?usp=sharing"><button class="w3-container w3-center w3-margin portfolio-buttons" style="width: 30%">Booklet</button></a>
-					</div>
-					<p style="text-align: center">Promotional booklet created to celebrate SABR TOPSoccer's 20th season. Based in Boca Raton, SABR TOPSoccer is a volunteer-based program that provides special needs athletes the opportunity of recreational soccer (free of charge). Made with Microsoft Word and some Adobe Photoshop use.</p>
-				</div>
-			</div>
-			<br>
-			<div class="w3-container in-production" data-aos="fade" data-aos-duration="1100">
-				<p>In Production</p>
-			</div>
 		</div>
 	</div>
-	<div>
-		<div id="background" class="w3-container">
-			<p id="background-header" data-aos="fade-right" data-aos-duration="1100">Background</p>
-		</div>
-		<div id="background-text" class="w3-container" data-aos="fade-left" data-aos-duration="1100">
-			<p>My name is Carter Frost. I like to make websites. I'm proudly from West Palm Beach, Florida.</p>
-			<p>I'm currently studying for my B.A. in Digital Media at the University of Central Florida, specializing in web and social platforms. In the last year, I've studied front-end languages like HTML, CSS, and JavaScript, frameworks such as React, and modern environment tools. I've as well made projects using PHP and MySQL. My studies have also included graphic and user interface design, video editing, accessibility theory, the impact of social platforms, and working within diverse teams. I can speak a little Japanese too. I'm graduating next spring with currently a 3.6 GPA.</p>
-			<p>I lean towards front-end development, currently building projects to include in this very portfolio. I love to learn new things, open myself up to opportunities where I can learn new things, and show that I've learned new things. I welcome all opportunities digital media or otherwise. My passion for learning new skills and producing quality work can be your asset.</p>
-			<p>Besides studying and coding, I also love to work with special needs children. I've been part of <a href="https://www.sabrsoccer.net/top-soccer/about/">SABR TOPSoccer</a> for the last six years, a program for teaching disabled children and adults the sport of soccer. I deeply value inclusivity and fostering equitable experiences. In my spare time, I also like to study Japanese, lift weights, and read.</p>
-			<p>Below, you'll find my contact information. I can be your next developer, designer, digital media savant, anything really. Let's work together to build something great.</p>
-		</div>
-	</div>
-	<div class="w3-container">
-		<a href="mailto:carterfrostdean@gmail.com"><p id="contact-header">Contact Me</p></a>
-	</div>
-	<div id="footer" class="w3-row">
-		<div class="w3-col l2 m3 s3">
-			<a href="https://www.linkedin.com/in/carter-frost-5012211a7/"><span style="color: white;"><i class="fab fa-linkedin fa-2x"></i><span class="w3-hide-small">&nbsp;&nbsp;LinkedIn</span></span></a>
-		</div>
-		<div class="w3-col l2 m3 s3">
-			<a href="https://github.com/frostcarterdean"><span style="color: white;"><i class="fab fa-github fa-2x"></i><span class="w3-hide-small">&nbsp;&nbsp;GitHub</span></span></a>
-		</div>
-		<div class="w3-col l4 m6 s3">
-			<a href="mailto:carterfrostdean@gmail.com"><span style="color: white;"><i class="fas fa-envelope fa-2x"></i><span class="w3-hide-small">&nbsp;&nbsp;carterfrostdean@gmail.com</span></span></a>
-		</div>
-	</div>
-	<script>
-	AOS.init();
-	window.onscroll = function() {myFunction()};
-
-	var navbar = document.getElementById("navigation");
-	var sticky = navbar.offsetTop;
-
-	function myFunction() {
-		if (window.pageYOffset >= sticky) {
-			navbar.classList.add("sticky")
-		} else {
-			navbar.classList.remove("sticky");
-		}
-	}
+	<div class="w3-container contact-button w3-hover-shadow" onclick="location.href='mailto:carterfrostdean@gmail.com';"><i class="fas fa-paper-plane"></i>&nbsp;Contact</div>
 	
-	function myFunction2(id) {
-		var x = document.getElementById(id);
-		if (x.className.indexOf("w3-show") == -1) {
-		x.className += " w3-show";
-		} else { 
-			x.className = x.className.replace(" w3-show", "");
-		}
-	}
-	
-	</script>
+	<div class="w3-row" id="footer">
+		<div class="w3-col l1 m2 s4" style="text-align: center"><a href="https://www.linkedin.com/in/carter-frost-5012211a7/"><i class="fab fa-linkedin fa-2x"></i></a></div>
+		<div class="w3-col l1 m2 s4" style="text-align: center"><a href="https://github.com/frostcarterdean"><i class="fab fa-github fa-2x"></i></a></div>
+		<div class="w3-col l1 m2 s4" style="text-align: center"><a href="mailto:carterfrostdean@gmail.com"><i class="fas fa-envelope fa-2x"></i></a></div>
+	</div>
+	</div>
+	<script>AOS.init();</script>
 </body>
 </html>
