@@ -24,10 +24,11 @@
 		#splash {
 			height: 100vh;
 			/* background-image: url('images/background_reduced.png'); */
-			background-position: center;
+			background-position: center right;
 			background-repeat: no-repeat;
-			background-size: cover;
 			position: relative;
+			background-image: url('images/tree.png');
+			background-size: 50%;
 		}
 		#carter-frost {
 			font-family: Poppins, sans-serif;
@@ -178,7 +179,6 @@
 			border-top-left-radius: .2em;
 			border-bottom-left-radius: .2em;
 			box-shadow: 3px 3px 4px #003356;
-			
 		}
 		.new-header-title {
 			border: .1em solid #00C2FF;
@@ -214,9 +214,17 @@
 			.skill-image {
 				height: 6vh;
 			}
+			#splash {
+				background-size: 90%;
+				background-position: center bottom;
+			}
 		}
 		
 		@media only screen and (max-width: 600px) {
+			#splash {
+				background-size: 100%;
+				background-position: center;
+			}
 			#carter-frost {
 				font-size: 6.5em;
 				margin-left: 0;
