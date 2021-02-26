@@ -27,11 +27,11 @@
 		#splash {
 			height: 100vh;
 			/* background-image: url('images/background_reduced.png'); */
-			background-position: center right;
+			background-position: center;
 			background-repeat: no-repeat;
 			position: relative;
-			background-image: url('images/tree.png');
-			background-size: 50%;
+			background-image: url('images/test.png'); /* tree.png */
+			background-size: 75%; /* 50% */
 		}
 		#carter-frost {
 			font-family: Poppins, sans-serif;
@@ -41,8 +41,8 @@
 			margin-left: 5vh;
 			color: #00C2FF;
 			font-size: 9em;
-			text-shadow: 3px 3px 4px #003356;
 			word-spacing: .1em;
+			text-shadow: 2px 2px 4px #003356;
 			
 			/*
 			
@@ -65,6 +65,11 @@
 			margin-left: 6vh;
 			margin-top: -1.5em;
 			word-spacing: .1em;
+			
+			background: rgb(255,255,255);
+			background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(200,233,255,1) 100%); 
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
 		}
 		#navigation-buttons-row {
 			margin-left: 6vh;
@@ -81,6 +86,7 @@
 			text-align: center;
 			border: .2em solid #00C2FF;
 			padding: .1em;
+			box-shadow: 3px 3px 4px #003356;
 		}
 		.navigation-buttons:hover {
 			color: #00C2FF;
@@ -146,6 +152,12 @@
 			word-spacing: .1em;
 			font-size: 1.1em;
 			line-height: 2em;
+			
+			background: rgb(255,255,255);
+			background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(200,233,255,1) 100%); 
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			
 		}
 		
 		.contact-button {
@@ -219,20 +231,21 @@
 		}
 		#footer div i:hover {
 			color: #00426E;
+			transition: all ease 0.3s;
 		}
 		#about {
-			background-position: left bottom;
-			background-repeat: no-repeat;
-			position: relative;
-			background-image: url('images/tree_3.png');
-			background-size: 23%;
-		}
-		#skills {
 			background-position: center;
 			background-repeat: no-repeat;
 			position: relative;
-			background-image: url('images/birds.png');
-			background-size: 40%;
+			background-image: url('images/rift2.png');
+			background-size: 43%;
+		}
+		#skills {
+			background-position: center left;
+			background-repeat: no-repeat;
+			position: relative;
+			background-image: url('images/hole.png');
+			background-size: 100%;
 		}
 		
 		.subheader {
@@ -243,6 +256,19 @@
 			color: white;
 			text-align: center;
 			margin-top: 1em;
+			
+			background: rgb(255,255,255);
+			background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(200,233,255,1) 100%); 
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		
+		#portfolio {
+			background-position: center;
+			background-repeat: repeat-x;
+			position: relative;
+			background-image: url('images/rift.png');
+			background-size: 60%;
 		}
 		
 		/* ------------------------------------ */
@@ -261,7 +287,7 @@
 				height: 6vh;
 			}
 			#splash {
-				background-size: 90%;
+				background-size: 200%;
 				background-position: center bottom;
 			}
 			#about {
@@ -271,7 +297,7 @@
 		
 		@media only screen and (max-width: 600px) {
 			#splash {
-				background-size: 100%;
+				background-size: 300%;
 				background-position: center;
 			}
 			#carter-frost {
@@ -302,19 +328,23 @@
 				width: 90%;
 				margin: auto;
 			}
+			#portfolio {
+				background-size: 300%;
+				background-position: center;
+			}
 			#about {
-				background-size: 70%;
+				background-size: 300%;
 				background-position: center bottom;
 			}
 			#skills {
-				background-position: center bottom;
-				background-size: 100%;
+				background-position: center;
+				background-size: 300%;
 			}
 		}
 	</style>
 </head>
 <body>
-	<div id="splash" data-aos="fade">
+	<div id="splash" data-aos="fade" data-aos-duration="3000">
 		<div class="w3-row">
 			<div class="w3-col">
 				<h1 id="carter-frost" data-aos="fade" data-aos-duration="2900">Carter Frost</h1>
@@ -328,6 +358,7 @@
 			<a href="mailto:carterfrostdean@gmail.com"><div class="navigation-buttons w3-col l2 m4 w3-hide-small w3-hover-shadow" data-aos="fade-up" data-aos-duration="2500">Contact</div></a>
 		</div>
 	</div>
+	<!-- <div style="position: absolute; z-index: -3; height: 100vh; width: 100vw; margin-top: -65em;  background-image: url('images/tile_test.png');">&nbsp;</div> -->
 	<div id="gradient" style="background: rgb(0,36,78); background: linear-gradient(0deg, rgba(0,36,78,1) 0%, rgba(1,96,160,1) 100%); ">
 	<div id="skills">
 		<div class="new-header w3-row">
@@ -416,7 +447,7 @@
 				<div class="w3-col l2 m4 s6">
 					<div class="skill-container">
 						<img class="skill-image" src="images/wordpress.png"></img>
-						<p>WordPress</p>
+						<p class="w3-tooltip">WordPress</p>
 					</div>
 				</div>
 				<div class="w3-col l2 m4 s6">
