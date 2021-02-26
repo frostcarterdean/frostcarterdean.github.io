@@ -4,6 +4,8 @@
 	<title>Carter Frost</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
+	<link rel="shortcut icon" href="images/favicon.ico"/>
+	
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,7 +19,7 @@
 	<style>
 		/* small: less 601 */
 		/* large: greater 992 */
-	
+		
 		body {
 			background-color: #0160a0;
 			overflow-x: hidden;
@@ -87,8 +89,9 @@
 			cursor: pointer;
 		}
 		.portfolio-button {
-			width: 80%; margin: auto; background-color: #00C2FF; font-family: Poppins, sans-serif; color: white; font-weight: bold; font-style: italic; text-align: center; word-spacing: .2em;
+			width: 80%; margin: auto; background-color: #00C2FF; font-family: Poppins, sans-serif; color: white; font-weight: bold; font-style: italic; text-align: center; word-spacing: .2em; font-size: 1.1em;
 			border-radius: .2em;
+			transition: all ease 0.3s;
 		}
 		.portfolio-button:hover {
 			background-color: white;
@@ -108,26 +111,27 @@
 			box-shadow: 3px 3px 4px #003356;
 		}
 		.skill-image {
-			height: 10vh;
+			height: 9vh;
 			margin-top: 1em;
+			opacity: 0.9;
 		}
 		.skill-container {
-			background-color: #00426E; background-image: url('images/tile2.png'); border: .2em solid #00C2FF; width: 60%; margin: auto; text-align: center; margin-top: 3em;
+			background-color: #00426E; background-image: url('images/tile2.png'); border: .3em solid #00C2FF; width: 60%; margin: auto; text-align: center; margin-top: 3em; box-shadow: 3px 3px 4px #003356;
 		}
 		.skill-container {
 			font-family: Poppins, sans-serif;
 			color: white;
-			font-weight: bold;
+			font-size: 1.2em;
 			font-style: italic;
 		}
 		@media only screen and (min-width: 993px) {
 			.skill-container {
-				width: 10em;
+				width: 9.5em;
 			}
 		}
 		@media only screen and (max-width: 992px) {
 			.skill-container {
-				width: 10em;
+				width: 8.5em;
 			}
 		}
 		.portfolio-container {
@@ -159,6 +163,7 @@
 			margin-top: 1.5em;
 			margin-bottom: 1.5em;
 			border-radius: .2em;
+			transition: all ease 0.3s;
 		}
 		.contact-button:hover {
 			background-color: #00C2FF;
@@ -228,6 +233,16 @@
 			position: relative;
 			background-image: url('images/birds.png');
 			background-size: 40%;
+		}
+		
+		.subheader {
+			font-family: Poppins, sans-serif;
+			font-weight: bold;
+			font-style: italic;
+			font-size: 2em;
+			color: white;
+			text-align: center;
+			margin-top: 1em;
 		}
 		
 		/* ------------------------------------ */
@@ -307,7 +322,7 @@
 			</div>
 		</div>
 		<div id="navigation-buttons-row" class="w3-row">
-			<a href="#skills"><div class="navigation-buttons w3-col l2 m2 w3-hide-small w3-hover-shadow" data-aos="fade-up" data-aos-duration="1000">Skills</div></a>
+			<a href="#skills" class="nav-test"><div class="navigation-buttons w3-col l2 m2 w3-hide-small w3-hover-shadow" data-aos="fade-up" data-aos-duration="1000">Skills</div></a>
 			<a href="#portfolio"><div class="navigation-buttons w3-col l2 m2 w3-hide-small w3-hover-shadow" data-aos="fade-up" data-aos-duration="1500">Portfolio</div></a>
 			<a href="#about"><div class="navigation-buttons w3-col l2 m2 w3-hide-small w3-hover-shadow" data-aos="fade-up" data-aos-duration="2000">About</div></a>
 			<a href="mailto:carterfrostdean@gmail.com"><div class="navigation-buttons w3-col l2 m4 w3-hide-small w3-hover-shadow" data-aos="fade-up" data-aos-duration="2500">Contact</div></a>
@@ -322,61 +337,121 @@
 			</div>
 		</div>
 		<div class="w3-row" style="width: 95%; margin: auto">
-			<div class="w3-col l2 m4 s6">
-				<div class="skill-container" data-aos="fade-up" data-aos-duration="1000">
-					<img class="skill-image" src="images/html.png"></img>
-					<p>HTML5</p>
+			<div id="test" data-aos="fade-right" data-aos-duration="2000">
+				<div class="w3-col l12 m12 s12 subheader">
+					<div>Web Development</div>
+				</div>
+				<div class="w3-col l2 m4 s6">
+					<div class="skill-container">
+						<img class="skill-image" src="images/html.png"></img>
+						<p>HTML5</p>
+					</div>
+				</div>
+				<div class="w3-col l2 m4 s6">
+					<div class="skill-container">
+						<img class="skill-image" src="images/css.png"></img>
+						<p>CSS3</p>
+					</div>
+				</div>
+				<div class="w3-col l2 m4 s6">
+					<div class="skill-container">
+						<img class="skill-image" src="images/js.png"></img>
+						<p>JavaScript</p>
+					</div>
+				</div>
+				<div class="w3-col l2 m4 s6">
+					<div class="skill-container">
+						<img class="skill-image" src="images/react.png"></img>
+						<p>React</p>
+					</div>
+				</div>
+				<div class="w3-col l2 m4 s6">
+					<div class="skill-container">
+						<img class="skill-image" src="images/php.png"></img>
+						<p>PHP</p>
+					</div>
+				</div>
+				<div class="w3-col l2 m4 s6">
+					<div class="skill-container">
+						<img class="skill-image" src="images/mysql.png"></img>
+						<p>MySQL</p>
+					</div>
 				</div>
 			</div>
-			<div class="w3-col l2 m4 s6">
-				<div class="skill-container" data-aos="fade-up" data-aos-duration="1200">
-					<img class="skill-image" src="images/css.png"></img>
-					<p>CSS3</p>
+			<div id="test2" data-aos="fade-right" data-aos-duration="2500">
+				<div class="w3-col l12 m12 s12 subheader">
+					<hr style="width: 95%; margin: auto; margin-top: 1em; margin-bottom: 1em; border: .1em solid #00C2FF; opacity: 0.4">
+					<div>Digital Content Production</div>
+				</div>
+				<div class="w3-col l2 m4 s6">
+					<div class="skill-container">
+						<img class="skill-image" src="images/photoshop.png"></img>
+						<p>Photoshop</p>
+					</div>
+				</div>
+				<div class="w3-col l2 m4 s6">
+					<div class="skill-container">
+						<img class="skill-image" src="images/illustrator.png"></img>
+						<p>Illustrator</p>
+					</div>
+				</div>
+				<div class="w3-col l2 m4 s6">
+					<div class="skill-container">
+						<img class="skill-image" src="images/xd.png"></img>
+						<p>XD</p>
+					</div>
+				</div>
+				<div class="w3-col l2 m4 s6">
+					<div class="skill-container">
+						<img class="skill-image" src="images/indesign.png"></img>
+						<p>InDesign</p>
+					</div>
+				</div>
+				<div class="w3-col l2 m4 s6">
+					<div class="skill-container">
+						<img class="skill-image" src="images/premiere.png"></img>
+						<p>Premiere Pro</p>
+					</div>
+				</div>
+				<div class="w3-col l2 m4 s6">
+					<div class="skill-container">
+						<img class="skill-image" src="images/wordpress.png"></img>
+						<p>WordPress</p>
+					</div>
+				</div>
+				<div class="w3-col l2 m4 s6">
+					<div class="skill-container">
+						<img class="skill-image" src="images/word.png"></img>
+						<p>Word</p>
+					</div>
+				</div>
+				<div class="w3-col l2 m4 s6">
+					<div class="skill-container">
+						<img class="skill-image" src="images/powerpoint.png"></img>
+						<p>PowerPoint</p>
+					</div>
 				</div>
 			</div>
-			<div class="w3-col l2 m4 s6">
-				<div class="skill-container" data-aos="fade-up" data-aos-duration="1400">
-					<img class="skill-image" src="images/js.png"></img>
-					<p>JavaScript</p>
+			<div id="test3" data-aos="fade-right" data-aos-duration="3000">
+				<div class="w3-col l12 m12 s12 subheader">
+					<hr style="width: 95%; margin: auto; margin-top: 1em; margin-bottom: 1em; border: .1em solid #00C2FF; opacity: 0.4">
+					<div>Data Analysis and Extraction</div>
 				</div>
-			</div>
-			<div class="w3-col l2 m4 s6">
-				<div class="skill-container" data-aos="fade-up" data-aos-duration="1600">
-					<img class="skill-image" src="images/react.png"></img>
-					<p>React</p>
+				<div class="w3-col l2 m4 s6">
+					<div class="skill-container">
+						<img class="skill-image" src="images/excel.png"></img>
+						<p>Excel</p>
+					</div>
 				</div>
-			</div>
-			<div class="w3-col l2 m4 s6">
-				<div class="skill-container" data-aos="fade-up" data-aos-duration="1800">
-					<img class="skill-image" src="images/php.png"></img>
-					<p>PHP</p>
-				</div>
-			</div>
-			<div class="w3-col l2 m4 s6">
-				<div class="skill-container" data-aos="fade-up" data-aos-duration="2000">
-					<img class="skill-image" src="images/mysql.png"></img>
-					<p>MySQL</p>
-				</div>
-			</div>
-			<div class="w3-col l2 m4 s6">
-				<div class="skill-container" data-aos="fade-up" data-aos-duration="2200">
-					<img class="skill-image" src="images/photoshop.png"></img>
-					<p>Photoshop</p>
-				</div>
-			</div>
-			<div class="w3-col l2 m4 s6">
-				<div class="skill-container" data-aos="fade-up" data-aos-duration="2400">
-					<img class="skill-image" src="images/xd.png"></img>
-					<p>XD</p>
-				</div>
-			</div>
-			<div class="w3-col l2 m4 s6">
-				<div class="skill-container" data-aos="fade-up" data-aos-duration="2600">
-					<img class="skill-image" src="images/office.png"></img>
-					<p>Office</p>
+				<div class="w3-col l2 m4 s6">
+					<div class="skill-container">
+						<img class="skill-image" src="images/orange.png"></img>
+						<p>Orange</p>
+					</div>
 				</div>
 			</div>
 		</div>
+		
 	</div>
 	<br>
 	
@@ -393,8 +468,8 @@
 		<div class="w3-row" style="width: 95%; margin: auto; margin-top: 3em;">
 		
 			<div class="portfolio-container w3-col l6 m6 s12" data-aos="fade-up" data-aos-duration="1500">
-				<div style="background-color: #00426E; background-image: url('images/tile2.png'); border: .2em solid #00C2FF; width: 90%; margin: auto;">
-					<div style="background-color: blue; height: 21em; background-image: url('images/covid.png'); background-position: center; background-repeat: no-repeat; background-size: cover; border-bottom: .2em solid #00C2FF">
+				<div style="background-color: #00426E; background-image: url('images/tile2.png'); border: .3em solid #00C2FF; width: 90%; margin: auto; box-shadow: 3px 3px 4px #003356;">
+					<div style="background-color: blue; height: 21em; background-image: url('images/covid.png'); background-position: center; background-repeat: no-repeat; background-size: cover; border-bottom: .3em solid #00C2FF">
 					</div>
 					<div>
 						<h2 style="text-align: center; color: white; font-family: Poppins, sans-serif; font-weight: bold; font-style: italic; width: 90%; margin: auto; margin-top: .5em; margin-bottom: .5em; font-size: 1.7em;">COVID-19 Travel Guide</h2>
@@ -416,8 +491,8 @@
 			</div>
 			
 			<div class="portfolio-container w3-col l6 m6 s12" data-aos="fade-up" data-aos-duration="2000">
-				<div style="background-color: #00426E; background-image: url('images/tile2.png'); border: .2em solid #00C2FF; width: 90%; height: 200%; margin: auto">
-					<div style="background-color: blue; height: 21em; background-image: url('https://i.imgur.com/I8oUmb8.png'); background-position: center; background-repeat: no-repeat; background-size: cover; border-bottom: .2em solid #00C2FF">
+				<div style="background-color: #00426E; background-image: url('images/tile2.png'); border: .3em solid #00C2FF; width: 90%; height: 200%; margin: auto; box-shadow: 3px 3px 4px #003356;">
+					<div style="background-color: blue; height: 21em; background-image: url('https://i.imgur.com/I8oUmb8.png'); background-position: center; background-repeat: no-repeat; background-size: cover; border-bottom: .3em solid #00C2FF">
 					</div>
 					<div>
 						<h2 style="text-align: center; color: white; font-family: Poppins, sans-serif; font-weight: bold; font-style: italic; width: 90%; margin: auto; margin-top: .5em; margin-bottom: .5em; font-size: 1.7em;">TOPSoccer 2020 Booklet</h2>
