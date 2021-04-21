@@ -1,690 +1,837 @@
-<!doctype HTML>
 <html>
-<head>
-	<title>Carter Frost</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<link rel="shortcut icon" href="images/favicon.ico"/>
-	
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-	
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	
-	<script src="https://kit.fontawesome.com/28aba166c5.js" crossorigin="anonymous"></script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9S1RZCQJMT"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+	<head>
+		<title>Title</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/28aba166c5.js" crossorigin="anonymous"></script>
+		<style>
+			* {
+				box-sizing: border-box;
+				scroll-behavior: smooth;
+			}
 
-		gtag('config', 'G-9S1RZCQJMT');
-	</script>
-	<style>
-		/* small: less 601 */
-		/* large: greater 992 */
-		
-		body {
-			background-color: #0160a0;
-			overflow-x: hidden;
-		}
-		#splash {
-			height: 100vh;
-			/* background-image: url('images/background_reduced.webp'); */
-			background-position: center;
-			background-repeat: no-repeat;
-			position: relative;
-			background-image: url('images/bg.png'); /* tree.webp */
-			background-size: 100%; /* 50% */
-			transition: opacity ease 5s;
-		}
-		#carter-frost {
-			font-family: Poppins, sans-serif;
-			font-weight: bold;
-			font-style: italic;
-			margin-top: 28vh;
-			margin-left: 5vh;
-			color: #00C2FF;
-			font-size: 9em;
-			word-spacing: .1em;
-			text-shadow: 2px 2px 4px #003356;
-			
+			body {
+				margin: 0;
+				/* font-family: 'Montserrat', sans-serif; */
+				color: #242424;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			/* All the snapping stuff */
+			.scroll-container {
+				height: 100vh;
+				overflow-y: scroll;
+				scroll-snap-type: y mandatory;
+			}
+
+			.section {
+				height: 100vh;
+				scroll-snap-align: center;
+			}
+
+			/* Other styles */
+			.section {
+				padding: 1rem;
+				/* display: flex; */
+				/*
+					align-items: center;
+					justify-content: center;
+				*/
+					background-color: #f5f5f5;
+			}
+
 			/*
-			
-			background-color: rgb(63,94,251);
-			background-image: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
-			background-size: 100%;
-			-webkit-background-clip: text;
-			-moz-background-clip: text;
-			-webkit-text-fill-color: transparent; 
-			-moz-text-fill-color: transparent;
-			
+				.section:nth-child(2n) {
+					background-color: turquoise;
+				}
+
+				.section:nth-child(3n) {
+					background-color: tomato;
+				}
 			*/
-		}
-		#carter-frost-description {
-			font-family: Poppins, sans-serif;
-			font-weight: bold;
-			font-style: italic;
-			color: white;
-			font-size: 2em;
-			margin-left: 6vh;
-			margin-top: -1.5em;
-			word-spacing: .1em;
 			
-			background: rgb(255,255,255);
-			background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(200,233,255,1) 100%); 
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-		}
-		#navigation-buttons-row {
-			margin-left: 6vh;
-		}
-		.navigation-buttons {
-			background-color: #00426E;
-			background-image: url('images/tile2.png');
-			margin-right: 1em;
-			color: white;
-			font-family: Poppins, sans-serif;
-			font-weight: bold;
-			font-style: italic;
-			font-size: 1.3em;
-			text-align: center;
-			border: .2em solid #00C2FF;
-			padding: .1em;
-			box-shadow: 3px 3px 4px #003356;
-		}
-		.navigation-buttons:hover {
-			color: #00C2FF;
-			background-image: none;
-			background-color: white;
-			cursor: pointer;
+			.first .name {
+				/* background-color: darkorchid; */
+				margin: 27vh 0 auto 7vw;
+			}
 			
-		}
-		.portfolio-button {
-			width: 80%; margin: auto; background-color: #00C2FF; font-family: Poppins, sans-serif; color: white; font-weight: bold; font-style: italic; text-align: center; word-spacing: .2em; font-size: 1.1em;
-			border-radius: .2em;
-			transition: all ease 0.3s;
-		}
-		.portfolio-button:hover {
-			background-color: white;
-			color: #00C2FF;
-		}
-		.header {
-			background-color: #00C2FF;
-			background-image: url('images/tile.png');
-			color: white;
-			margin-left: 5vh;
-			font-size: 2.5em;
-			font-family: Poppins, sans-serif;
-			font-weight: bold;
-			font-style: italic;
-			text-align: center;
-			border: .1em solid #00C2FF;
-			box-shadow: 3px 3px 4px #003356;
-		}
-		.skill-image {
-			height: 9vh;
-			margin-top: 1em;
-			opacity: 0.9;
-		}
-		.skill-container {
-			background-color: #00426E; background-image: url('images/tile2.png'); border: .3em solid #00C2FF; width: 60%; margin: auto; text-align: center; margin-top: 3em; box-shadow: 3px 3px 4px #003356;
-		}
-		.skill-container {
-			font-family: Poppins, sans-serif;
-			color: white;
-			font-size: 1.2em;
-			font-style: italic;
-		}
-		@media only screen and (min-width: 993px) {
-			.skill-container {
-				width: 9.5em;
+			.first .name h1 {
+				font-family: 'Montserrat', sans-serif;
+				font-size: 96px;
+				font-weight: bold;
+				letter-spacing: 2;
+				margin-bottom: -2.5vh;
 			}
-		}
-		@media only screen and (max-width: 992px) {
-			.skill-container {
-				width: 8.5em;
-			}
-		}
-		.portfolio-container {
-			margin-top: 1em;
-		}
-		
-		.about-text {
-			width: 95%;
-			margin: auto;
-			color: white;
-			font-family: Roboto, sans-serif;
-			word-spacing: .1em;
-			font-size: 1.1em;
-			line-height: 2em;
-		}
-		
-		.contact-button {
-			background-color: white;
-			/* background-image: url('images/tile.png'); */
-			color: #00C2FF;
-			font-size: 3em;
-			font-family: Poppins, sans-serif;
-			font-weight: bold;
-			font-style: italic;
-			text-align: center;
-			border: .1em solid #00C2FF;
-			width: 50%;
-			margin: auto;
-			margin-top: 1.5em;
-			margin-bottom: 1.5em;
-			border-radius: .2em;
-			transition: all ease 0.3s;
-		}
-		.contact-button:hover {
-			background-color: #00C2FF;
-			color: white;
-			cursor: pointer;
-		}
-		#footer {
-			background-color: #00C2FF;
-			background-image: url('images/tile.png');
-			padding: .5em;
-			color: white;
-		}
-		a {
-			text-decoration: none;
-		}
-		.new-header {
-			margin-top: 10em;
-			margin-bottom: 1em;
-		}
-		.new-header-container {
-			border-radius: .2em;
-			margin-left: 5vh;
 			
-		}
-		.new-header-icon {
-			background-color: white;
-			border: .1em solid #00C2FF;
-			color: #00C2FF;
-			text-align: center;
-			margin: auto;
-			font-size: 2.5em;
-			border-top-left-radius: .2em;
-			border-bottom-left-radius: .2em;
-			box-shadow: 3px 3px 4px #003356;
-		}
-		.new-header-title {
-			border: .1em solid #00C2FF;
-			background-color: #00426E; 
-			background-image: url('images/tile.png'); 
-			font-family: Poppins, sans-serif;
-			font-weight: bold;
-			font-style: italic;
-			font-size: 2.5em;
-			color: white;
-			text-align: center;
-			border-top-right-radius: .2em;
-			border-bottom-right-radius: .2em;
-			box-shadow: 3px 3px 4px #003356;
-		}
-		#about-body {
-			width: 85%; margin-left: 5vh; padding: 1.3em;
-			/* background-color: #00426E; background-image: url('images/tile2.png'); border: .2em solid #00C2FF; */
-		}
-		#footer div i:hover {
-			color: #00426E;
-			transition: all ease 0.3s;
-		}
-		#about {
-			background-position: center;
-			background-repeat: no-repeat;
-			position: relative;
-			background-image: url('images/rift2.webp');
-			background-size: 43%;
-		}
-		#skills {
-			background-position: center left;
-			background-repeat: no-repeat;
-			position: relative;
-			background-image: url('images/hole.webp');
-			background-size: 100%;
-		}
-		
-		.subheader {
-			font-family: Poppins, sans-serif;
-			font-weight: bold;
-			font-style: italic;
-			font-size: 2em;
-			color: white;
-			text-align: center;
-			margin-top: 1em;
-			
-			background: rgb(255,255,255);
-			background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(200,233,255,1) 100%); 
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-		}
-		
-		#portfolio {
-			background-position: center;
-			background-repeat: repeat-x;
-			position: relative;
-			background-image: url('images/rift.webp');
-			background-size: 60%;
-		}
-		
-		#copyright {
-			color: #00C2FF;
-			font-family: Roboto, sans-serif;
-			padding-bottom: .6em;
-			text-align: right;
-			width: 98%;
-			margin: auto;
-			opacity: .5;
-		}
-		
-		.hover-test:hover {
-			cursor: help;
-		}
-		
-		.hover-test-text {
-			font-style: normal;
-			font-size: 0.85em;
-		}
-		
-		.hover-test .hover-test-text {
-			visibility: hidden;
-			position: absolute;
-			z-index: 1;
-			background-color: #00C2FF;
-			border-radius: 1em;
-			color: white;
-			padding: .7em;
-			box-shadow: 3px 3px 4px #003356;
-			margin-left: 2em;
-			margin-top: -1em;
-			width: inherit;
-			opacity: 0;
-			transition: opacity ease .2s;
-		}
-		
-		.hover-test:hover .hover-test-text {
-			visibility: visible;
-			opacity: 1;
-		}
-		
-		.hover-info {
-			font-family: Poppins, sans-serif;
-			font-weight: bold;
-			font-style: italic;
-			font-size: 2.5em;
-			color: white;
-			text-align: center;
-			color: #00C2FF;
-			opacity: .8;
-			margin-top: .5em;
-		}
-		
-		/* ------------------------------------ */
-		
-		@media only screen and (max-width: 800px) and (min-width: 601px) {
-			.new-header {
-				margin-left: -2vh;
+			.first .name h3 {
+				font-size: 34px;
+				margin-bottom: 2.5vh;
+				letter-spacing: 0.25;
 			}
-			#splash {
-				margin-left: -2vh;
+			.nav-bar {
+				margin-top: 1vh;
 			}
-			.navigation-buttons {
-				font-size: 1.2em;
+			.nav {
+				font-family: Montserrat;
+				font-size: 16px;
+				letter-spacing: 0.15;
 			}
-			.skill-image {
-				height: 6vh;
+			.nav a {
+				
 			}
-			#splash {
-				background-size: 200%;
-				background-position: center bottom;
+			.nav a:hover {
+				color: #1f59b5;
+				cursor: pointer;
 			}
-			#about {
-				background-size: 40%;
-			}
-			.hover-test:hover .hover-test-text {
-				visibility: hidden;
-			}
-			.hover-test:hover {
-				cursor: default;
-			}
-			.hover-info {
-				display: none;
-			}
-		}
-		
-		@media only screen and (max-width: 600px) {
-			#splash {
-				background-size: 300%;
-				background-position: center;
-				margin-top: -1em;
-			}
-			#carter-frost {
-				font-size: 6.5em;
-				margin-left: 0;
-				margin-top: 6vh;
+			.button {
+				font-size: 20px;
+				font-family: Montserrat;
+				border: 2px solid #1f59b5;
+				padding: 10px;
 				text-align: center;
+				width: 20%;
+				border-radius: 10px;
+				margin-left: 7vw;
+				transition: color linear .3s;
+				transition: background-color linear .3s;
+				letter-spacing: 0.15;
 			}
-			#carter-frost-description {
-				width: 90%;
-				margin: auto;
-				text-align: center;
-				font-size: 2em;
+			
+			.button:hover {
+				cursor: pointer;
+				background-color: #1f59b5;
+				color: #f5f5f5;
 			}
-			#navigation-buttons-row {
-				display: none;
-			}
-			.header, .new-header-container {
-				margin-left: 0;
-			}
-			.new-header-icon, .new-header-title {
-				border-radius: 0;
-			}
-			.contact-button {
-				width: 90%;
-			}
-			#about-body {
-				width: 90%;
-				margin: auto;
-			}
-			#portfolio {
-				background-size: 300%;
-				background-position: center;
-			}
-			#about {
-				background-size: 300%;
-				background-position: center bottom;
-			}
-			#skills {
-				background-position: center;
-				background-size: 300%;
-			}
-			#copyright {
-				text-align: center;
-			}
-			.hover-test:hover .hover-test-text {
-				visibility: hidden;
-			}
-			.hover-test:hover {
-				cursor: default;
-			}
-			.hover-info {
-				display: none;
-			}
+			
 			.subheader {
-				background: none;
-				-webkit-background-clip: unset;
-				-webkit-text-fill-color: unset;
-				color: white;
+				font-family: Montserrat;
+				font-size: 48px;
+				text-align: center;
 			}
-		}
-	</style>
-</head>
-<body>
-	<div id="splash" data-aos="fade" data-aos-duration="3000">
-		<div class="w3-row">
-			<div class="w3-col">
-				<h1 id="carter-frost" data-aos="fade" data-aos-duration="2900">Carter Frost</h1>
-				<p id="carter-frost-description" data-aos="fade" data-aos-duration="2900">Creative digital media specialist ready to work for you.</p>
-			</div>
-		</div>
-		<div id="navigation-buttons-row" class="w3-row">
-			<a href="#skills" class="nav-test"><div class="navigation-buttons w3-col l2 m2 w3-hide-small w3-hover-shadow" data-aos="fade-up" data-aos-duration="1000">Skills</div></a>
-			<a href="#portfolio"><div class="navigation-buttons w3-col l2 m2 w3-hide-small w3-hover-shadow" data-aos="fade-up" data-aos-duration="1500">Portfolio</div></a>
-			<a href="#about"><div class="navigation-buttons w3-col l2 m2 w3-hide-small w3-hover-shadow" data-aos="fade-up" data-aos-duration="2000">About</div></a>
-			<a href="mailto:carterfrostdean@gmail.com"><div class="navigation-buttons w3-col l2 m4 w3-hide-small w3-hover-shadow" data-aos="fade-up" data-aos-duration="2500">Contact</div></a>
-		</div>
-	</div>
-	<!-- <div style="position: absolute; z-index: -3; height: 100vh; width: 100vw; margin-top: -65em;  background-image: url('images/tile_test.webp');">&nbsp;</div> -->
-	<div id="gradient" style="background: rgb(0,36,78); background: linear-gradient(0deg, rgba(0,36,78,1) 0%, rgba(1,96,160,1) 100%); ">
-	
-	<div id="skills">
-		<div class="new-header w3-row" data-aos="fade-right" data-aos-duration="1000">
-			<div class="new-header-container w3-row">
-				<div class="w3-col l1 m2 s3 new-header-icon"><i class="fas fa-tools"></i></div>
-				<div class="w3-col l3 m5 s9 new-header-title">Skills</div>
-			</div>
-		</div>
-		<div class="w3-row" style="width: 95%; margin: auto">
-			<div class="w3-row hover-info">Hover on each skill for more details.</div>
-			<div id="test">
-				<div class="w3-col l12 m12 s12 subheader">
-					<div>Web Development</div>
-				</div>
-				<div class="w3-col l2 m4 s6">
-					<div class="skill-container hover-test">
-						<img class="skill-image" src="images/html.webp"></img>
-						<p>HTML5</p>
-						<div class="hover-test-text">Can design websites for both desktop and mobile.</div>
-					</div>
-				</div>
-				<div class="w3-col l2 m4 s6">
-					<div class="skill-container hover-test">
-						<img class="skill-image" src="images/css.webp"></img>
-						<p>CSS3</p>
-						<div class="hover-test-text">Can stylize websites and use CSS frameworks and preprocessors.</div>
-					</div>
-				</div>
-				<div class="w3-col l2 m4 s6">
-					<div class="skill-container hover-test">
-						<img class="skill-image" src="images/js.webp"></img>
-						<p>JavaScript</p>
-						<div class="hover-test-text">Can script website functionality, develop small-scale programs, and use JavaScript frameworks and libraries.</div>
-					</div>
-				</div>
-				<div class="w3-col l2 m4 s6">
-					<div class="skill-container hover-test">
-						<img class="skill-image" src="images/react.webp"></img>
-						<p>React</p>
-						<div class="hover-test-text">Can use JavaScript library React to develop web applications.</div>
-					</div>
-				</div>
-				<div class="w3-col l2 m4 s6">
-					<div class="skill-container hover-test">
-						<img class="skill-image" src="images/php.webp"></img>
-						<p>PHP</p>
-						<div class="hover-test-text">Can program website back-end functionality.</div>
-					</div>
-				</div>
-				<div class="w3-col l2 m4 s6">
-					<div class="skill-container hover-test">
-						<img class="skill-image" src="images/mysql.webp" style="filter: brightness(120%);"></img>
-						<p>MySQL</p>
-						<div class="hover-test-text">Can use in conjunction with PHP to dynamically manage website and user data.</div>
-					</div>
-				</div>
-			</div>
-			<div id="test2">
-				<div class="w3-col l12 m12 s12 subheader">
-					<hr style="width: 95%; margin: auto; margin-top: 1em; margin-bottom: 1em; border: .1em solid #00C2FF; opacity: 0.4">
-					<div>Digital Multimedia Production</div>
-				</div>
-				<div class="w3-col l2 m4 s6">
-					<div class="skill-container hover-test">
-						<img class="skill-image" src="images/photoshop.webp"></img>
-						<p>Photoshop</p>
-						<div class="hover-test-text">Can use Adobe Photoshop to create and edit images.</div>
-					</div>
-				</div>
-				<div class="w3-col l2 m4 s6">
-					<div class="skill-container hover-test">
-						<img class="skill-image" src="images/illustrator.webp"></img>
-						<p>Illustrator</p>
-						<div class="hover-test-text">Can use Adobe Illustrator to create and edit vector graphics.</div>
-					</div>
-				</div>
-				<div class="w3-col l2 m4 s6">
-					<div class="skill-container hover-test">
-						<img class="skill-image" src="images/xd.webp"></img>
-						<p>XD</p>
-						<div class="hover-test-text">Can use Adobe XD to design user interfaces.</div>
-					</div>
-				</div>
-				<div class="w3-col l2 m4 s6">
-					<div class="skill-container hover-test">
-						<img class="skill-image" src="images/indesign.webp"></img>
-						<p>InDesign</p>
-						<div class="hover-test-text">Can use Adobe InDesign to create promotional materials such as posters and booklets.</div>
-					</div>
-				</div>
-				<div class="w3-col l2 m4 s6">
-					<div class="skill-container hover-test">
-						<img class="skill-image" src="images/premiere.webp"></img>
-						<p>Premiere Pro</p>
-						<div class="hover-test-text">Can use Adobe Premiere Pro to create and edit videos.</div>
-					</div>
-				</div>
-				<div class="w3-col l2 m4 s6">
-					<div class="skill-container hover-test">
-						<img class="skill-image" src="images/wordpress.webp"></img>
-						<p class="w3-tooltip">WordPress</p>
-						<div class="hover-test-text">Can use WordPress to make and modify websites.</div>
-					</div>
-				</div>
-				<div class="w3-col l2 m4 s6">
-					<div class="skill-container hover-test">
-						<img class="skill-image" src="images/word.webp"></img>
-						<p>Word</p>
-						<div class="hover-test-text">Can use Microsoft Word to write documents and create promotional materials such as booklets.</div>
-					</div>
-				</div>
-				<div class="w3-col l2 m4 s6">
-					<div class="skill-container hover-test">
-						<img class="skill-image" src="images/powerpoint.webp"></img>
-						<p>PowerPoint</p>
-						<div class="hover-test-text">Can use Microsoft PowerPoint to create and give presentations.</div>
-					</div>
-				</div>
-			</div>
-			<div id="test3">
-				<div class="w3-col l12 m12 s12 subheader">
-					<hr style="width: 95%; margin: auto; margin-top: 1em; margin-bottom: 1em; border: .1em solid #00C2FF; opacity: 0.4">
-					<div>Data Analysis and Mining</div>
-				</div>
-				<div class="w3-col l2 m4 s6">
-					<div class="skill-container hover-test">
-						<img class="skill-image" src="images/excel.webp"></img>
-						<p>Excel</p>
-						<div class="hover-test-text">Can proficiently use Microsoft Excel and formulas, charts, macros, and pivot tables to create elaborate data spreadsheets.</div>
-					</div>
-				</div>
-				<div class="w3-col l2 m4 s6">
-					<div class="skill-container hover-test">
-						<img class="skill-image" src="images/orange.webp"></img>
-						<p>Orange</p>
-						<div class="hover-test-text">Can mine user data from websites like Twitter and create data visualizations like scatter plots and heat maps.</div>
-					</div>
-				</div>
-			</div>
-		</div>
+			
+			.about-text {
+				width: 50%;
+				margin: 5vh 0 auto 7vw;
+				line-height: 2;
+				font-size: 16px;
+				letter-spacing: 0.5;
+			}
+			.item-section {
+				margin-top: 14vh;
+			}
+			.item div, .item2 div {
+				width: 90%; margin: auto; margin-top: 2vh; 
+				text-align: center;
+				padding: 0; font-family: Montserrat;
+			}
+			.item div p, .item2 div p {
+				font-size: 20px;
+			}
+			.item div i, .item2 div i {
+				font-size: 74px;
+			}	
+			
+			.item:nth-child(9), .item:nth-child(10), .item:nth-child(11), .item:nth-child(12), .item:nth-child(13) {
+				margin-top: 10vh;
+			}
+			.item2:nth-child(8), .item2:nth-child(9), .item2:nth-child(10), .item2:nth-child(11)  {
+				margin-top: 10vh;
+			}
+			
+			/* ---------------------------- Portfolio ---------------------------- */
+			
+			.portfolio-pieces {
+				width: 70%; margin: auto; margin-top: 7vh;
+			}
+			.portfolio-item div {
+				width: 80%;
+				background-color: #242424;
+				color: #f5f5f5;
+				height: 20vh;
+				transition: opacity ease-in .2s;
+			}
+			.portfolio-item:nth-child(1) div, .portfolio-item:nth-child(4) div, .portfolio-item:nth-child(7) div {
+				float: right;
+			}
+			.portfolio-item:nth-child(2) div, .portfolio-item:nth-child(5) div, .portfolio-item:nth-child(8) div {
+				margin: auto;
+			}
+			.portfolio-item:nth-child(4) div, .portfolio-item:nth-child(5) div, .portfolio-item:nth-child(6) div, .portfolio-item:nth-child(7) div, .portfolio-item:nth-child(8) div, .portfolio-item:nth-child(9) div {
+				margin-top: 4vh;
+			}
+			.portfolio-item div:hover {
+				cursor: pointer;
+				opacity: .5;
+			}
+			.portfolio-description-text {
+				line-height: 2;
+				font-size: 16px;
+				letter-spacing: 0.5;
+			}
+			.link-buttons {
+				margin-top: 2.5vh;
+			}
+			.link-buttons span {
+				background-color: #f5f5f5; color: #242424; padding: 10px; border-radius: 2px; font-family: Montserrat; transition: color linear .3s; transition: background-color linear .3s;
+			}
+			.link-buttons span:hover {
+				cursor: pointer;
+				background-color: #1f59b5;
+				color: #f5f5f5;
+			}
+			
+			.contact-link {
+				transition: color linear .3s;	
+			}
+			
+			.contact-link:hover {
+				cursor: pointer;
+				color: #1f59b5;
+			}
+			
+			/* ------------------------------------------------------------------- */
+			
+			/* ---------------------------- Mobile Portfolio ---------------------------- */
+			
+			
+			.scroll-container-mobile {
+				width: 300px;
+				height: 300px;
+				/* max-height: 30rem; */
+				margin: 3rem auto;
+				display: flex;
+				overflow-x: scroll;
+				scroll-snap-type: x mandatory;
+				
+			}
+			
+			.mobile-section {
+				height: 100%;
+				flex: 0 0 100%;
+				scroll-snap-align: center;
+				padding: 1rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+			}
+			
+			.portfolio-row {
+				width: 70%; margin: auto; margin-top: 30vh;
+			}
+			
+			.contact-link {
+				width: 75%; margin: auto; text-align: center;
+			}
+			
+			/* ------------------------------------------------------------------- */
+			
+			@media only screen and (max-width: 992px) and (min-width: 376px) {
+				.scroll-container-mobile {
+					width: 600px;
+					height: 600px;
+				}
+				.portfolio-row {
+					width: 95%; margin: auto; margin-top: 30vh;
+				}
+			}
+			
+			@media only screen and (max-width: 992px) {
+				.first {
+					/* 
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					*/
+				}
+				.first .name {
+					margin: auto;
+					text-align: center;
+					margin-top: 3vh;
+				}
+				.first .name h1 {
+					margin-top: 0;
+				}
+				.first .name h3 {
+					padding: 10px;
+					
+				}
+				.button {
+					width: 90%;
+					margin: auto;
+				}
+				.about-text {
+					width: 90%;
+					margin: auto;
+				}
+				.subheader {
+					font-size: 34px;
+				}
+				.item-section {
+					margin-top: 3vh;
+				}
+				.item:nth-child(9), .item:nth-child(10), .item:nth-child(11), .item:nth-child(12), .item:nth-child(13) {
+					margin-top: 0;
+				}
+				.item2:nth-child(8), .item2:nth-child(9), .item2:nth-child(10), .item2:nth-child(11)  {
+					margin-top: 0;
+				}
+				.item div p, .item2 div p, .about-text p {
+					font-size: 16px;
+				}
+				.item div i, .item2 div i {
+					font-size: 36px;
+				}	
+			}
+			
+			@media only screen and (max-width: 375px) {
+				.portfolio-row {
+					width: 95%; margin: auto; 
+				}
+				.contact-link {
+					margin-top: 7vh;
+				}
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!-- 
+		<main class="scroll-container">
+			<section>
+				<h2>Section 1</h2>
+			</section>
+			<section>
+				<h2>Section 2</h2>
+			</section>
+			<section>
+				<h2>Section 3</h2>
+			</section>
+			<section>
+				<h2>Section 4</h2>
+			</section>
+		</main>
+		-->
+		<main class="scroll-container">
 		
-	</div>
-	<br>
-	
-	<div id="portfolio">
-	
+			<!-- First Section -->
 		
-	
-		<div class="new-header w3-row" data-aos="fade-right" data-aos-duration="1000">
-			<div class="new-header-container w3-row">
-				<div class="w3-col l1 m2 s3 new-header-icon"><i class="fas fa-folder"></i></div>
-				<div class="w3-col l3 m5 s9 new-header-title">Portfolio</div>
+			<div class="section first">
+				<div class="nav-bar w3-row w3-hide-medium w3-hide-small">
+					<div class="nav w3-col l1">&nbsp;</div>
+					<div class="nav w3-col l2"><a href="#about">About</a></div>
+					<div class="nav w3-col l2"><a href="#skills">Skills</a></div>
+					<div class="nav w3-col l2"><a href="#portfolio">Portfolio</a></div>
+					<div class="nav w3-col l2"><a href="#contact">Contact</a></div>
+				</div>
+				<div class="name" style="">
+					<h1>Carter Frost</h1>
+					<h3>Creative digital media specialist ready to work for you.</h3>
+				</div>
+				<a href="#about"><div class="button">
+					Learn More
+				</div></a>
 			</div>
-		</div>
-		<div class="w3-row" style="width: 95%; margin: auto; margin-top: 3em;">
-		
-			<div class="portfolio-container w3-col l6 m6 s12">
-				<div style="background-color: #00426E; background-image: url('images/tile2.png'); border: .3em solid #00C2FF; width: 90%; margin: auto; box-shadow: 3px 3px 4px #003356;">
-					<div style="background-color: blue; height: 21em; background-image: url('images/covid.webp'); background-position: center; background-repeat: no-repeat; background-size: cover; border-bottom: .3em solid #00C2FF">
+			
+			<!-- About Section -->
+			
+			<div id="about" class="section second">
+				<h2 class="subheader">Who am I?</h2>
+				<hr style="border: 1px solid #1f59b5; width: 50%; margin: 0 auto 0 auto" /> 
+				<div class="about-text">
+					<p>My name is Carter Frost. Developer, designer, writer, administrative assistant, soccer coach, guy who wants to work and work hard. Graduated UCF with a degree in Digital Media in May 2021. I'm from West Palm Beach, Florida. I'm a multimedia specialist who can make just about anything. Outside of digital design, I'm open to all opportunities. I thrive off challenges, new experiences, and working with others.</p>
+					<hr class="" style="border: 1px solid #242424; opacity: .4" /> <!-- <h2 class="subheader">Who am I?</h2> -->
+					<p class="">I'd love to work with you and make this portfolio even better. See my LinkedIn for more.</p>
+				</div>
+			</div>
+			
+			<!-- Soft Skills Section -->
+			
+			<div id="skills" class="section third">
+				<h2 class="subheader">What can I do?</h2>
+				<hr style="border: 1px solid #1f59b5; width: 50%; margin: 0 auto 0 auto" /> 
+				<div>
+					<div class="item-section w3-row">
+						<div class="item w3-col l1 w3-hide-medium w3-hide-small" style="visibility: hidden">
+							<div><i class="fas fa-palette"></i><p>Hidden</p></div>
+						</div>
+						<div class="item w3-col l2 m6 s6">
+							<div><i class="fas fa-images"></i><p>Photo Editing</p></div>
+						</div>
+						<div class="item w3-col l2 m6 s6">
+							<div><i class="fas fa-palette"></i><p>Logos</p></div>
+						</div>
+						<div class="item w3-col l2 m6 s6">
+							<div><i class="fas fa-book-open"></i><p>Pamphlets</p></div>
+						</div>
+						<div class="item w3-col l2 m6 s6">
+							<div><i class="fas fa-book-open"></i><p>Brochures</p></div>
+						</div>
+						<div class="item w3-col l2 m6 s6">
+							<div><i class="fas fa-book-open"></i><p>Booklets</p></div>
+						</div>
+						<div class="item w3-col l1 w3-hide-medium w3-hide-small" style="visibility: hidden">
+							<div><i class="fas fa-palette"></i><p>Hidden</p></div>
+						</div>
+						<div class="item w3-col l1 w3-hide-medium w3-hide-small" style="visibility: hidden">
+							<div><i class="fas fa-palette"></i><p>Hidden</p></div>
+						</div>
+						<div class="item w3-col l2 m6 s6">
+							<div><i class="fas fa-book-open"></i><p>Magazines</p></div>
+						</div>
+						<div class="item w3-col l2 m6 s6">
+							<div><i class="fas fa-laptop-code"></i><p>Websites</p></div>
+						</div>
+						<div class="item w3-col l2 m6 s6">
+							<div><i class="fas fa-grip-horizontal"></i><p>User Interfaces</p></div>
+						</div>
+						<div class="item w3-col l2 m6 s6">
+							<div><i class="fas fa-video"></i><p>Video Editing</p></div>
+						</div>
+						<div class="item w3-col l2 m6 s6">
+							<div><i class="fas fa-pen"></i><p>Copywriting</p></div>
+						</div>
 					</div>
-					<div>
-						<h2 style="text-align: center; color: white; font-family: Poppins, sans-serif; font-weight: bold; font-style: italic; width: 90%; margin: auto; margin-top: .5em; margin-bottom: .5em; font-size: 1.7em;">COVID-19 Travel Guide</h2>
-						<div class="w3-row" style="margin-top: -.5em;">
-							<div class="w3-col w3-col l6 m6 s6">
-								<div class="portfolio-button">
-									<a href="https://github.com/frostcarterdean/Workshop/tree/main"><p style="padding: .5em;"><i class="fab fa-github"></i>&nbsp;Code</p></a>
-								</div>
+				</div>
+			</div>
+			
+			<!-- Hard Skills Section -->
+			
+			<div class="section">
+				<h2 class="subheader">What are my skills?</h2>
+				<hr style="border: 1px solid #1f59b5; width: 50%; margin: 0 auto 0 auto" />
+				<div>
+					<div class="item-section w3-row">
+						<div class="item2 w3-col l2 w3-hide-medium w3-hide-small" style="visibility: hidden">
+							<div><i class="fas fa-palette"></i><p>Hidden</p></div>
+						</div>
+						<div class="item2 w3-col l2 m6 s6">
+							<div><i class="fab fa-html5"></i><p>HTML5</p></div>
+						</div>
+						<div class="item2 w3-col l2 m6 s6">
+							<div><i class="fab fa-css3-alt"></i><p>CSS3</p></div>
+						</div>
+						<div class="item2 w3-col l2 m6 s6">
+							<div><i class="fab fa-js"></i><p>JavaScript</p></div>
+						</div>
+						<div class="item2 w3-col l2 m6 s6">
+							<div><i class="fab fa-php"></i><p>PHP</p></div>
+						</div>
+						<div class="item2 w3-col l2 w3-hide-medium w3-hide-small" style="visibility: hidden">
+							<div><i class="fas fa-palette"></i><p>Hidden</p></div>
+						</div>
+						<div class="item2 w3-col l2 w3-hide-medium w3-hide-small" style="visibility: hidden">
+							<div><i class="fas fa-palette"></i><p>Hidden</p></div>
+						</div>
+						<div class="item2 w3-col l2 m6 s6">
+							<div><i class="fas fa-code"></i><p>MySQL</p></div>
+						</div>
+						<div class="item2 w3-col l2 m6 s6">
+							<div><i class="fab fa-wordpress"></i><p>WordPress</p></div>
+						</div>
+						<div class="item2 w3-col l2 m6 s6">
+							<div><i class="fab fa-microsoft"></i><p>Microsoft Office</p></div>
+						</div>
+						<div class="item2 w3-col l2 m6 s6">
+							<div><i class="fas fa-cloud"></i><p>Adobe Creative Cloud</p></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Portfolio Section -->
+			
+			<div id="portfolio" class="section">
+				<h2 class="subheader">Here's some of my work.</h2>
+				<hr style="border: 1px solid #1f59b5; width: 50%; margin: 0 auto 0 auto" />
+				<div class="portfolio-pieces w3-row w3-hide-medium w3-hide-small">
+					<div class="portfolio-item w3-col l4">
+						<div id="covid-portfolio" style="background-image: url('portfolio_covid.png'); background-position: center; background-size: cover; background-repeat: no-repeat;" onclick="document.getElementById('popup-covid').style.display='block';">&nbsp;</div>
+					</div>
+					<div class="portfolio-item w3-col l4">
+						<div style="background-image: url('portfolio_topsoccer.png'); background-position: center; background-size: cover; background-repeat: no-repeat;" onclick="document.getElementById('popup-booklet').style.display='block';">&nbsp;</div>
+					</div>
+					<div class="portfolio-item w3-col l4">
+						<div style="background-image: url('portfolio_mask.png'); background-position: center; background-size: cover; background-repeat: no-repeat;" onclick="document.getElementById('popup-mask').style.display='block';">&nbsp;</div>
+					</div>
+					<div class="portfolio-item w3-col l4">
+						<div style="background-image: url('portfolio_old.png'); background-position: center; background-size: cover; background-repeat: no-repeat;" onclick="document.getElementById('popup-old').style.display='block';">&nbsp;</div>
+					</div>
+					<div class="portfolio-item w3-col l4">
+						<div style="background-image: url('portfolio_frost.png'); background-position: center; background-size: cover; background-repeat: no-repeat;" onclick="document.getElementById('popup-frost').style.display='block';">&nbsp;</div>
+					</div>
+					<div class="portfolio-item w3-col l4">
+						<div style="background-image: url('portfolio_jolteon.png'); background-position: center; background-size: cover; background-repeat: no-repeat;" onclick="document.getElementById('popup-jolteon').style.display='block';">&nbsp;</div>
+					</div>
+					<div class="portfolio-item w3-col l4">
+						<div style="background-image: url('portfolio_scorbunny.png'); background-position: center; background-size: cover; background-repeat: no-repeat;" onclick="document.getElementById('popup-scorbunny').style.display='block';">&nbsp;</div>
+					</div>
+					<div class="portfolio-item w3-col l4">
+						<div style="background-image: url('portfolio_red.png'); background-position: center; background-size: cover; background-repeat: no-repeat;" onclick="document.getElementById('popup-red').style.display='block';">&nbsp;</div>
+					</div>
+					<div class="portfolio-item w3-col l4">
+						<div>&nbsp;</div>
+					</div>
+				</div>
+				<div class="scroll-container-mobile w3-hide-large">
+					<section class="mobile-section" style="background-image: url('jolteon.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+						<h2>&nbsp;</h2>
+					</section>
+					<section class="mobile-section" style="background-image: url('scorbunny.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+						<h2>&nbsp;</h2>
+					</section>
+					<section class="mobile-section" style="background-image: url('red.gif'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+						<h2>&nbsp;</h2>
+					</section>
+					<section class="mobile-section" style="background-image: url('frost_logo.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+						<h2>&nbsp;</h2>
+					</section>
+					<section class="mobile-section" style="background-image: url('mobile_covid.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+						<h2>&nbsp;</h2>
+					</section>
+					<section class="mobile-section" style="background-image: url('mobile_mask.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+						<h2>&nbsp;</h2>
+					</section>
+					<section class="mobile-section" style="background-image: url('mobile_old.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+						<h2>&nbsp;</h2>
+					</section>
+					<section class="mobile-section" style="background-image: url('mobile_booklets.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+						<h2>&nbsp;</h2>
+					</section>
+				</div>
+				<h3 class="w3-hide-large" style="font-family: Montserrat; text-align: center; opacity: .4">Click for more information.</h2>
+			</div>
+			
+			<!-- Medium and Small Viewport Portfolio Thing -->
+			
+			
+			
+			<!-- Popup Windows -->
+			
+			<!---------- COVID-19 Travel Guide ---------->
+			
+			<div id="popup-covid" class="w3-modal">
+				<div class="w3-modal-content w3-animate-left">
+					<div class="w3-container" style="background-color: #242424; color: #f5f5f5;"> <!-- margin-top: -4vh -->
+						<span onclick="document.getElementById('popup-covid').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<!--
+						<br><br>
+						<div class="w3-row" id="popup-covid-image" style="height: 40vh; width: 95%; margin: auto; background-color: #242424; background-image: none; background-position: center; background-size: cover; background-repeat: no-repeat; opacity: .9;">&nbsp;</div>
+						-->
+						<div style="padding: 20px; margin-top: -2vh">
+							<h1 style="font-family: Montserrat">COVID-19 Travel Guide</h1>
+							<div class="technologies w3-row" style="font-weight: bold; margin-top: 1vh; font-family: Montserrat;">
+								<span style="background-color: #f5f5f5; color: #242424; padding: 7px; border-radius: 2px;">HTML5</span>
+								<span style="margin-left: 1vw; background-color: #f5f5f5; color: #242424; padding: 7px; border-radius: 2px">CSS3</span>
+								<span style="margin-left: 1vw; background-color: #f5f5f5; color: #242424; padding: 7px; border-radius: 2px">JavaScript</span>
+								<span style="margin-left: 1vw; background-color: #f5f5f5; color: #242424; padding: 7px; border-radius: 2px">PHP</span>
+								<span style="margin-left: 1vw; background-color: #f5f5f5; color: #242424; padding: 7px; border-radius: 2px">MySQL</span>
 							</div>
-							<div class="w3-col w3-col l6 m6 s6">
-								<div class="portfolio-button">
-									<a href="https://students.cah.ucf.edu/~ca631855/travel/"><p style="padding: .5em;"><i class="fas fa-external-link-alt"></i>&nbsp;Live</p></a>
-								</div>
+							<p class="portfolio-description-text">Group project, a website that retrieves and reports COVID-19 data through four different APIs. Home page uses PHP and MySQL table data to link to news articles, United States page uses an API in conjunction with Google GeoCharts to produce an interactive map showing state and county data, and World page outputs statistics for more than 150 countries. Most code my own, logo not mine.</p>
+							<div class="link-buttons" style="margin-bottom: 2vh">
+								<a href="https://students.cah.ucf.edu/~ca631855/travel/index.php"><span>Live Version</span></a>
+								<a href="https://github.com/frostcarterdean/Workshop"><span style="margin-left: 1vw;">GitHub Code</span></a>
 							</div>
 						</div>
 					</div>
-					<p style="text-align: center; width: 90%; margin: auto; margin-top: -.1em; margin-bottom: 1em; color: white; font-family: Roboto, sans-serif; font-size: 1.1em; line-height: 2em; word-spacing: .1em">Website that links to breaking news articles about COVID-19, displays COVID-19 statistics for all states and counties in the United States, and shows statistics and information about COVID-19 worldwide. Made with vanilla HTML, CSS, JavaScript, PHP, and MySQL and uses data from four different APIs.</p>
 				</div>
 			</div>
 			
-			<div class="portfolio-container w3-col l6 m6 s12">
-				<div style="background-color: #00426E; background-image: url('images/tile2.png'); border: .3em solid #00C2FF; width: 90%; height: 200%; margin: auto; box-shadow: 3px 3px 4px #003356;">
-					<div style="background-color: blue; height: 21em; background-image: url('https://i.imgur.com/I8oUmb8.webp'); background-position: center; background-repeat: no-repeat; background-size: cover; border-bottom: .3em solid #00C2FF">
-					</div>
-					<div>
-						<h2 style="text-align: center; color: white; font-family: Poppins, sans-serif; font-weight: bold; font-style: italic; width: 90%; margin: auto; margin-top: .5em; margin-bottom: .5em; font-size: 1.7em;">TOPSoccer 2020 Booklet</h2>
-						<div class="w3-row" style="margin-top: -.5em;">
-							<div class="w3-col w3-col l6 m6 s6">
-								<div class="portfolio-button">
-									<a href="https://drive.google.com/file/d/1SV8yHnMQq9a0J4mtWMiGDgwNIEWLy5hT/view?usp=sharing"><p style="padding: .5em;"><i class="fas fa-book"></i>&nbsp;Cover</p></a>
-								</div>
+			<!---------- Booklet ---------->
+			
+			<div id="popup-booklet" class="w3-modal">
+				<div class="w3-modal-content w3-animate-left">
+					<div class="w3-container" style="background-color: #242424; color: #f5f5f5;">
+						<span onclick="document.getElementById('popup-booklet').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<!--
+						<br><br>
+						<div class="w3-row" id="popup-booklet-image" style="height: 40vh; width: 95%; margin: auto; background-color: #242424; background-image: none; background-position: center; background-size: cover; background-repeat: no-repeat; opacity: .9;">&nbsp;</div>
+						-->
+						<div style="padding: 20px; margin-top: -2vh">
+							<h1 style="font-family: Montserrat">SABR TOPSoccer 2020 Season Booklet</h1>
+							<div class="technologies w3-row" style="font-weight: bold; margin-top: 1vh; font-family: Montserrat;">
+								<span style="background-color: #f5f5f5; color: #242424; padding: 7px; border-radius: 2px;">Word</span>
+								<span style="margin-left: 1vw; background-color: #f5f5f5; color: #242424; padding: 7px; border-radius: 2px">Photoshop</span>
 							</div>
-							<div class="w3-col w3-col l6 m6 s6">
-								<div class="portfolio-button">
-									<a href="https://drive.google.com/file/d/1y40Ye_Hu2VUBl0fWrtP22xXuhWNAE7ld/view?usp=sharing"><p style="padding: .5em;"><i class="fas fa-book-open"></i>&nbsp;Booklet</p></a>
-								</div>
+							<p class="portfolio-description-text">Promotional booklets voluntarily composed for the 20th season of SABR TOPSoccer, a program in Boca Raton, FL that provides recreational soccer to special needs athletes.</p>
+							<div class="link-buttons" style="margin-bottom: 2vh">
+								<a href="https://drive.google.com/file/d/1SV8yHnMQq9a0J4mtWMiGDgwNIEWLy5hT/view"><span>Cover Spreads</span></a>
+								<a href="https://drive.google.com/file/d/1y40Ye_Hu2VUBl0fWrtP22xXuhWNAE7ld/view"><span style="margin-left: 1vw;">Booklet Spreads</span></a>
 							</div>
 						</div>
 					</div>
-					<p style="text-align: center; width: 90%; margin: auto; margin-top: -.1em; margin-bottom: 1em; color: white; font-family: Roboto, sans-serif; font-size: 1.1em; line-height: 2em; word-spacing: .1em">Promotional booklet created to celebrate SABR TOPSoccer's 20th season. Based in Boca Raton, SABR TOPSoccer is a volunteer-based program that provides special needs athletes the opportunity of recreational soccer (free of charge). Made with Microsoft Word and some Adobe Photoshop use.</p>
 				</div>
 			</div>
 			
-		</div>
-	</div>
-		
-		<div id="about">
-			<div id="about-header" class="w3-row">
-			<div class="new-header w3-row">
-			<div class="new-header-container w3-row" data-aos="fade-right" data-aos-duration="1000">
-				<div class="w3-col l1 m2 s3 new-header-icon"><i class="fas fa-user"></i></div>
-				<div class="w3-col l3 m5 s9 new-header-title">About</div>
-			</div>
-		</div>
+			<!---------- Mask Conscious Project ---------->
 			
-			<div class="w3-row">
-				<div class="w3-col l12 m12 s12">
-					<div id="about-body">
-						<p class="about-text">My name is Carter Frost. I like to make websites and more. I'm proudly from Lake Worth, Florida.</p>
-						<hr style="width: 95%; margin: auto; margin-top: 1em; margin-bottom: 1em; border: 2px solid #00C2FF">
-						<p class="about-text">I'm studying for my B.A. in Digital Media at the University of Central Florida, graduating this year with currently a 3.6 GPA. My studies have included graphic design, video editing, front-end and back-end website development, user interface and experience design, user accessibility theory, and some Japanese. I can do a little bit of everything.</p>
-						<hr style="width: 95%; margin: auto; margin-top: 1em; margin-bottom: 1em; border: 2px solid #00C2FF">
-						<p class="about-text">I'm also part of SABR TOPSoccer, a program based in Boca Raton dedicated to providing free recreational soccer to special needs athletes. I deeply value inclusivity and hopefully, you'll find that in my work.</p>
-						<hr style="width: 95%; margin: auto; margin-top: 1em; margin-bottom: 1em; border: 2px solid #00C2FF">
-						<p class="about-text">As I'm graduating soon, I'm eager to enter the professional workforce. I'd love to be your next designer, developer, digital media savant, anything really. I'm open to all opportunities, even those not explicitly technology-related. Let my passions for learning, quality, and all things digital media be your next assets.</p>
-						<hr style="width: 95%; margin: auto; margin-top: 1em; margin-bottom: 1em; border: 2px solid #00C2FF">
-						<p class="about-text">My email address is carterfrostdean@gmail.com. Let's work together and build something great.</p>
+			<div id="popup-mask" class="w3-modal">
+				<div class="w3-modal-content w3-animate-left">
+					<div class="w3-container" style="background-color: #242424; color: #f5f5f5;">
+						<span onclick="document.getElementById('popup-mask').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<!--
+						<br><br>
+						<div class="w3-row" id="popup-mask-image" style="height: 40vh; width: 95%; margin: auto; background-color: #242424; background-image: none; background-position: center; background-size: cover; background-repeat: no-repeat; opacity: .9;">&nbsp;</div>
+						-->
+						<div style="padding: 20px; margin-top: -2vh">
+							<h1 style="font-family: Montserrat">The Mask Conscious Project</h1>
+							<div class="technologies w3-row" style="font-weight: bold; margin-top: 1vh; font-family: Montserrat;">
+								<span style="background-color: #f5f5f5; color: #242424; padding: 7px; border-radius: 2px;">HTML5</span>
+								<span style="margin-left: 1vw; background-color: #f5f5f5; color: #242424; padding: 7px; border-radius: 2px">CSS3</span>
+								<span style="margin-left: 1vw; background-color: #f5f5f5; color: #242424; padding: 7px; border-radius: 2px">JavaScript</span>
+								<span style="margin-left: 1vw; background-color: #f5f5f5; color: #242424; padding: 7px; border-radius: 2px">PHP</span>
+								<span style="margin-left: 1vw; background-color: #f5f5f5; color: #242424; padding: 7px; border-radius: 2px">MySQL</span>
+							</div>
+							<p class="portfolio-description-text">Group project, informational website meant to educate about disposable mask pollution caused by the COVID-19 pandemic, sell a conceptual biodegradable mask, and feature products made by small businesses. Features limited JavaScript functionality and use PHP and MySQL to display store listings. Code and text is my own, logo made by another member, and images courtesy of Unsplash.</p>
+							<div class="link-buttons" style="margin-bottom: 2vh">
+								<a href="https://students.cah.ucf.edu/~ca631855/mask/"><span>Live Version</span></a>
+								<!-- <a href=""><span style="margin-left: 1vw;">GitHub Code</span></a> -->
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="w3-container contact-button w3-hover-shadow" onclick="location.href='mailto:carterfrostdean@gmail.com';"><i class="fas fa-paper-plane"></i>&nbsp;Contact</div>
-	</div>
-	<div class="w3-row" id="copyright">&#169; 2021 Carter Frost</div>
+			
+			<!---------- Old Portfolio Website ---------->
+			
+			<div id="popup-old" class="w3-modal">
+				<div class="w3-modal-content w3-animate-left">
+					<div class="w3-container" style="background-color: #242424; color: #f5f5f5;">
+						<span onclick="document.getElementById('popup-old').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<!--
+						<br><br>
+						<div class="w3-row" id="popup-old-image" style="height: 40vh; width: 95%; margin: auto; background-color: #242424; background-image: none; background-position: center; background-size: cover; background-repeat: no-repeat; opacity: .9;">&nbsp;</div>
+						-->
+						<div style="padding: 20px; margin-top: -2vh">
+							<h1 style="font-family: Montserrat">Old Portfolio Website</h1>
+							<div class="technologies w3-row" style="font-weight: bold; margin-top: 1vh; font-family: Montserrat;">
+								<span style="background-color: #f5f5f5; color: #242424; padding: 7px; border-radius: 2px;">HTML5</span>
+								<span style="margin-left: 1vw; background-color: #f5f5f5; color: #242424; padding: 7px; border-radius: 2px">CSS3</span>
+								<span style="margin-left: 1vw; background-color: #f5f5f5; color: #242424; padding: 7px; border-radius: 2px">JavaScript</span>
+							</div>
+							<p class="portfolio-description-text">Old portfolio website prior to be updated.</p>
+							<div class="link-buttons" style="margin-bottom: 2vh">
+								<a href="https://students.cah.ucf.edu/~ca631855/portfolio_old/"><span>Live Version</span></a>
+								<!-- <a href=""><span style="margin-left: 1vw;">GitHub Code</span></a> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!---------- Frost Security Alternative Logo ---------->
+			
+			<div id="popup-frost" class="w3-modal">
+				<div class="w3-modal-content w3-animate-left">
+					<div class="w3-container" style="background-color: #242424; color: #f5f5f5;">
+						<span onclick="document.getElementById('popup-frost').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<!--
+						<br><br>
+						<div class="w3-row" id="popup-frost-image" style="height: 40vh; width: 95%; margin: auto; background-color: #242424; background-image: none; background-position: center; background-size: cover; background-repeat: no-repeat; opacity: .9;">&nbsp;</div>
+						-->
+						<div class="w3-row" style="padding: 20px; margin-top: -2vh">
+							<div class="w3-col l6">
+								<div style="height: 325px; width: 325px; margin: auto; margin-right: 4vw; margin-top: 2vh; background-image: url('frost_logo.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">&nbsp;</div>
+							</div>
+							<div class="w3-col l6">
+								<h1 style="font-family: Montserrat">Frost Security Alternative Logo</h1>
+								<div class="technologies w3-row" style="font-weight: bold; margin-top: 1vh; font-family: Montserrat;">
+									<span style="background-color: #f5f5f5; color: #242424; padding: 7px; border-radius: 2px;">Adobe Illustrator</span>
+								</div>
+								<p class="portfolio-description-text">Conceptual redesign logo for Frost Security Group LLC.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!---------- Jolteon ---------->
+			
+			<div id="popup-jolteon" class="w3-modal">
+				<div class="w3-modal-content w3-animate-left">
+					<div class="w3-container" style="background-color: #242424; color: #f5f5f5;">
+						<span onclick="document.getElementById('popup-jolteon').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<!--
+						<br><br>
+						<div class="w3-row" id="popup-jolteon-image" style="height: 40vh; width: 95%; margin: auto; background-color: #242424; background-image: none; background-position: center; background-size: cover; background-repeat: no-repeat; opacity: .9;">&nbsp;</div>
+						-->
+						<div class="w3-row" style="padding: 20px; margin-top: -2vh">
+							<div class="w3-col l6">
+								<div style="height: 325px; width: 325px; margin: auto; margin-right: 4vw; margin-top: 2vh; background-image: url('jolteon.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">&nbsp;</div>
+							</div>
+							<div class="w3-col l6">
+								<h1 style="font-family: Montserrat">Jolteon Vector and Sticker</h1>
+								<div class="technologies w3-row" style="font-weight: bold; margin-top: 1vh; font-family: Montserrat;">
+									<span style="background-color: #f5f5f5; color: #242424; padding: 7px; border-radius: 2px;">Adobe Photoshop</span>
+									<span style="margin-left: 1vw; background-color: #f5f5f5; color: #242424; padding: 7px; border-radius: 2px;">Adobe Illustrator</span>
+								</div>
+								<p class="portfolio-description-text">Mockup sticker of Jolteon, a creature from the Pokémon series. Using a design from a trading card, created a vector graphic and then modified in Photoshop to conceptualize as a sticker.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!---------- Scorbunny ---------->
+			
+			<div id="popup-scorbunny" class="w3-modal">
+				<div class="w3-modal-content w3-animate-left">
+					<div class="w3-container" style="background-color: #242424; color: #f5f5f5;">
+						<span onclick="document.getElementById('popup-scorbunny').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<!--
+						<br><br>
+						<div class="w3-row" id="popup-scorbunny-image" style="height: 40vh; width: 95%; margin: auto; background-color: #242424; background-image: none; background-position: center; background-size: cover; background-repeat: no-repeat; opacity: .9;">&nbsp;</div>
+						-->
+						<div class="w3-row" style="padding: 20px; margin-top: -2vh">
+							<div class="w3-col l6">
+								<div style="height: 325px; width: 325px; margin: auto; margin-right: 4vw; margin-top: 2vh; background-image: url('scorbunny.png'); background-position: center; background-size: cover; background-repeat: no-repeat;">&nbsp;</div>
+							</div>
+							<div class="w3-col l6">
+								<h1 style="font-family: Montserrat">Scorbunny Vector</h1>
+								<div class="technologies w3-row" style="font-weight: bold; margin-top: 1vh; font-family: Montserrat;">
+									<span style="background-color: #f5f5f5; color: #242424; padding: 7px; border-radius: 2px;">Adobe Illustrator</span>
+								</div>
+								<p class="portfolio-description-text">Vector graphic of Scorbunny, a creature from the Pokémon series.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!---------- Red ---------->
+			
+			<div id="popup-red" class="w3-modal">
+				<div class="w3-modal-content w3-animate-left">
+					<div class="w3-container" style="background-color: #242424; color: #f5f5f5;">
+						<span onclick="document.getElementById('popup-red').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+						<!--
+						<br><br>
+						<div class="w3-row" id="popup-red-image" style="height: 40vh; width: 95%; margin: auto; background-color: #242424; background-image: none; background-position: center; background-size: cover; background-repeat: no-repeat; opacity: .9;">&nbsp;</div>
+						-->
+						<div class="w3-row" style="padding: 20px; margin-top: -2vh">
+							<div class="w3-col l6">
+								<div style="height: 325px; width: 325px; margin: auto; margin-right: 4vw; margin-top: 2vh; background-image: url('red.gif'); background-position: center; background-size: cover; background-repeat: no-repeat;">&nbsp;</div>
+							</div>
+							<div class="w3-col l6">
+								<h1 style="font-family: Montserrat">Pixel Mage Character Concept</h1>
+								<div class="technologies w3-row" style="font-weight: bold; margin-top: 1vh; font-family: Montserrat;">
+									<span style="background-color: #f5f5f5; color: #242424; padding: 7px; border-radius: 2px;">Piskel</span>
+								</div>
+								<p class="portfolio-description-text">Concept pixel art of a mage, made as part of an art course.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<script>
+			
+				var z = 0;
+				var z2 = 0;
+				var z3 = 0;
+				// carousel();
+				// carousel2();
+				// carousel3();
+
+				/*
+				function carousel() {
+					var array = ["url('covid_popup1.png')", "url('covid_popup2.png')", "url('covid_popup3.png')"];
+					var x = document.getElementById("popup-covid-image");
+					x.style.backgroundImage = array[z];
+					z++;
+					if (z == array.length) {
+						z = 0;
+					}
+					setTimeout(carousel, 4000);
+				}
+				
+				function carousel2() {
+					var array = ["url('booklet_popup1.png')", "url('booklet_popup2.png')", "url('booklet_popup3.png')"];
+					var x = document.getElementById("popup-booklet-image");
+					x.style.backgroundImage = array[z2];
+					z2++;
+					if (z2 == array.length) {
+						z2 = 0;
+					}
+					setTimeout(carousel2, 4000);
+				}
+				
+				function carousel3() {
+					var array = ["url('mask_popup1.png')", "url('mask_popup2.png')", "url('mask_popup3.png')", "url('mask_popup4.png')"];
+					var x = document.getElementById("popup-mask-image");
+					x.style.backgroundImage = array[z3];
+					z3++;
+					if (z3 == array.length) {
+						z3 = 0;
+					}
+					setTimeout(carousel3, 4000);
+				}
+				*/
+				
+				// ----------------------------------------------
+				
+				// Get the modal // Fix this later
+				var modal = document.getElementById('popup-covid');
+				var modal2 = document.getElementById('popup-booklet');
+				var modal3 = document.getElementById('popup-mask');
+				var modal4 = document.getElementById('popup-old');
+				var modal5 = document.getElementById('popup-frost');
+				var modal6 = document.getElementById('popup-jolteon');
+				var modal7 = document.getElementById('popup-scorbunny');
+				var modal8 = document.getElementById('popup-red');
+
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function(event) {
+				  if (event.target == modal || event.target == modal2 || event.target == modal3 || event.target == modal4 || event.target == modal5 || event.target == modal6 || event.target == modal7 || event.target == modal8) {
+					modal.style.display = "none";
+					modal2.style.display = "none";
+					modal3.style.display = "none";
+					modal4.style.display = "none";
+					modal5.style.display = "none";
+					modal6.style.display = "none";
+					modal7.style.display = "none";
+					modal8.style.display = "none";
+				  }
+				}
+				
+				/*
+				window.onclick = function(event) {
+				  if (event.target == modal2) {
+					modal2.style.display = "none";
+				  }
+				}
+				*/
 	
-	<div class="w3-row" id="footer">
-		<div class="w3-col l1 m2 s4" style="text-align: center"><a href="https://www.linkedin.com/in/carter-frost-5012211a7/"><i class="fab fa-linkedin fa-2x"></i></a></div>
-		<div class="w3-col l1 m2 s4" style="text-align: center"><a href="https://github.com/frostcarterdean"><i class="fab fa-github fa-2x"></i></a></div>
-		<div class="w3-col l1 m2 s4" style="text-align: center"><a href="mailto:carterfrostdean@gmail.com"><i class="fas fa-envelope fa-2x"></i></a></div>
-	</div>
-	</div>
-	<script>AOS.init();</script>
-</body>
+			</script>
+			
+			<!-- Contact Section -->
+			
+			<div id="contact" class="section">
+				<h2 class="subheader">Let's work together!</h2>
+				<hr style="border: 1px solid #1f59b5; width: 50%; margin: 0 auto 0 auto" />
+				<div class="w3-row portfolio-row">
+					<div class="w3-col l4 m4 s12">
+						<div class="contact-link" style="">
+							<a href="mailto: carterfrostdean@gmail.com"><i class="fas fa-8x fa-envelope"></i></a>
+						</div>
+					</div>
+					<div class="w3-col l4 m4 s12">
+						<div class="contact-link" style="">
+							<a href="https://www.linkedin.com/in/carter-frost-5012211a7/"><i class="fab fa-8x fa-linkedin"></i></a>
+						</div>
+					</div>
+					<div class="w3-col l4 m4 s12">
+						<div class="contact-link" style="">
+							<a href="https://github.com/frostcarterdean"><i class="fab fa-8x fa-github"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
 </html>
